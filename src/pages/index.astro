@@ -8,8 +8,10 @@ const posts = (await getCollection("blog")).sort(
 
 const getPostSlug = (id: string) => id.replace(/\.md$/, "");
 
-const mailto =
-  "mailto:coach@perda.com.tr?subject=Ücretsiz%20deneme%20seansı%20talebi&body=Merhaba%20Perda%20İnsan%20Kaynakları%2C%0A%0AYapay%20zeka%20ile%20koçluk%20uygulaması%20için%20ücretsiz%20deneme%20seansı%20talep%20ediyorum.%0A%0AAd%20Soyad%3A%0ATelefon%3A%0AKoçluk%20odağım%3A%0A";
+const emailSubject = "Ücretsiz deneme seansı talebi";
+const emailBody =
+  "Merhaba Perda İnsan Kaynakları,\n\nYapay zeka ile koçluk uygulaması için ücretsiz deneme seansı talep ediyorum.\n\nAd Soyad:\nTelefon:\nKoçluk odağım:\n";
+const contactUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
 const steps = [
   {
@@ -54,7 +56,7 @@ const scopes = [
         Hayatınızda değiştirmek istediğiniz bir şey var mı? Perda, bireysel ve kurumsal hedefler için yapılandırılmış, erişilebilir ve insan odaklı bir yapay zeka koçluk uygulamasıdır.
       </p>
       <div class="hero-actions">
-        <a class="button" href={mailto}>Ücretsiz Deneme Seansı Al</a>
+        <a class="button" href={contactUrl} target="_blank" rel="noopener noreferrer">Ücretsiz Deneme Seansı Al</a>
         <a class="button-secondary" href="#nasil-calisir">Nasıl Çalışır?</a>
       </div>
     </div>
@@ -129,7 +131,7 @@ const scopes = [
           Talebinizi e-posta ile iletin. Size deneme seansı için dönüş yapılır ve uygun koçluk odağı belirlenir.
         </p>
       </div>
-      <a class="button" href={mailto}>coach@perda.com.tr adresine başvur</a>
+      <a class="button" href={contactUrl} target="_blank" rel="noopener noreferrer">coach@perda.com.tr adresine başvur</a>
     </div>
   </section>
 
@@ -165,7 +167,7 @@ const scopes = [
         <p>Hayatınızda değiştirmek istediğiniz bir şey var mı? Deneme seansı talebinizi bize iletin.</p>
       </div>
       <div class="contact-box">
-        <a href="mailto:coach@perda.com.tr">coach@perda.com.tr</a>
+        <a href={contactUrl} target="_blank" rel="noopener noreferrer">coach@perda.com.tr</a>
         <span>Akasya Kule, Acıbadem Mah. Üsküdar / İstanbul</span>
         <span>perda.com.tr</span>
       </div>

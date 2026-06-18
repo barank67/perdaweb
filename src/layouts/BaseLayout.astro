@@ -18,6 +18,8 @@ const navItems = [
   { href: "/blog", label: "Blog" },
   { href: "/#iletisim", label: "İletişim" },
 ];
+const contactUrl =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=%C3%9Ccretsiz%20deneme%20seans%C4%B1%20talebi";
 ---
 
 <!doctype html>
@@ -46,7 +48,7 @@ const navItems = [
       <nav aria-label="Ana menü">
         {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
       </nav>
-      <a class="header-cta" href="mailto:coach@perda.com.tr?subject=Ücretsiz%20deneme%20seansı%20talebi">Deneme Seansı</a>
+      <a class="header-cta" href={contactUrl} target="_blank" rel="noopener noreferrer">Deneme Seansı</a>
     </header>
     <main>
       <slot />
@@ -58,7 +60,7 @@ const navItems = [
       </div>
       <div>
         <strong>İletişim</strong>
-        <a href="mailto:coach@perda.com.tr">coach@perda.com.tr</a>
+        <a href={contactUrl} target="_blank" rel="noopener noreferrer">coach@perda.com.tr</a>
         <span>Akasya Kule, Acıbadem Mah. Üsküdar / İstanbul</span>
       </div>
       <div>

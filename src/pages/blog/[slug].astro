@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\.md$/, "") },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={`${post.data.title} | Perda İnsan Kaynakları`} description={post.data.description} image={post.data.image}>
+  <article class="article">
+    <header class="article-header">
+      <div class="container">
+        <a class="back-link" href="/blog">Blog</a>
+        <p class="eyebrow">{post.data.category} · {post.data.readTime}</p>
+        <h1>{post.data.title}</h1>
+        <p class="lead">{post.data.description}</p>
+      </div>
+      <img src={post.data.image} alt="" width="1536" height="864" />
+    </header>
+    <div class="article-body">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-header {
+    padding: clamp(52px, 8vw, 92px) clamp(18px, 5vw, 64px) 0;
+    background: var(--soft);
+  }
+
+  .back-link {
+    display: inline-flex;
+    margin-bottom: 28px;
+    color: var(--teal);
+    font-weight: 800;
+  }
+
+  .article-header img {
+    width: min(1160px, 100%);
+    max-height: 560px;
+    margin: 42px auto 0;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+  }
+
+  .article-body {
+    width: min(760px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: clamp(42px, 6vw, 72px) 0;
+  }
+
+  .article-body :global(h2) {
+    margin-top: 42px;
+    margin-bottom: 14px;
+    font-size: clamp(1.55rem, 3vw, 2.2rem);
+  }
+
+  .article-body :global(p),
+  .article-body :global(li) {
+    color: #344340;
+    font-size: 1.05rem;
+  }
+
+  .article-body :global(ul) {
+    padding-left: 22px;
+  }
+</style>

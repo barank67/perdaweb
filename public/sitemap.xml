@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://perda.com.tr/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://perda.com.tr/blog/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://perda.com.tr/blog/yapay-zeka-ile-kocluk-nasil-calisir/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://perda.com.tr/blog/iliski-koclugunde-dijital-destek/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://perda.com.tr/blog/liderlik-ve-karar-almada-kocluk/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://perda.com.tr/kvkk/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://perda.com.tr/gizlilik-politikasi/</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>

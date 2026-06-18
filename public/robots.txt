@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://perda.com.tr/sitemap.xml

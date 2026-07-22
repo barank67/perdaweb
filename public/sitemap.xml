@@ -9,6 +9,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://perda.com.tr/fiyatlar/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://perda.com.tr/blog/yapay-zeka-ile-kocluk-nasil-calisir/</loc>
     <priority>0.7</priority>
   </url>

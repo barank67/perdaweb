@@ -12,6 +12,7 @@ const emailSubject = "Ücretsiz deneme seansı talebi";
 const emailBody =
   "Merhaba Perda İnsan Kaynakları,\n\nYapay zeka ile koçluk uygulaması için ücretsiz deneme seansı talep ediyorum.\n\nAd Soyad:\nTelefon:\nKoçluk odağım:\n";
 const contactUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
 
 const steps = [
   {
@@ -57,11 +58,18 @@ const afterSessionFeatures = [
     text: "Seans sonunda benzer duygular yaşamış insanların gerçek hikayeleri paylaşılır. Danışan, zorlayıcı bir durumu fırsata çevirmiş kişilerin deneyimlerinden ilham alarak kendi adımını daha net düşünebilir.",
   },
 ];
+
+const coachingGains = [
+  "Farkındalık",
+  "Somut aksiyon ve egzersiz",
+  "Sorunu fırsata çevirmek için ilham",
+  "Odağı sorundan çözüme çeviren diyalog",
+];
 ---
 
 <BaseLayout
   title="Yapay Zeka ile Koçluk Uygulaması | Perda İnsan Kaynakları"
-  description="Perda İnsan Kaynakları, bireysel ve kurumsal hedefler için yapay zeka destekli koçluk deneyimi sunar. Kısa süre için ücretsiz tek seans deneyin."
+  description="Perda İnsan Kaynakları, bireysel ve kurumsal hedefler için yapay zeka destekli koçluk deneyimi sunar. Kredi kartı bilgisi gerekmeden ücretsiz seansınızı başlatın."
 >
   <section class="hero">
     <div class="hero-copy">
@@ -84,7 +92,7 @@ const afterSessionFeatures = [
     <div class="container message-inner">
       <h2>Hayatınızda değiştirmek istediğiniz bir şey var mı?</h2>
       <p>
-        İlk sürümümüz test aşamasında. Kısa süre için ücretsiz tek seans deneme hakkıyla uygulamayı deneyebilir, size uygun gelişim odağını birlikte netleştirebilirsiniz.
+        Gece 11'de bir mesaj aldınız ve kafanız çok karıştı ya da sabaha karşı 4:00'da endişe içinde uyandınız. Koçunuza her an ulaşmak ister misiniz?
       </p>
     </div>
   </section>
@@ -107,6 +115,21 @@ const afterSessionFeatures = [
           <p>{step.text}</p>
         </article>
       ))}
+    </div>
+  </section>
+
+  <section class="outcomes-section">
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Dakikalar İçinde</p>
+        <h2>Yapay zeka koçunuz 7-10 soruyla odağınızı netleştirir.</h2>
+      </div>
+      <p>
+        Perda, uzun hazırlık gerektirmeden sizi dinleyen, doğru sorularla düşünmenizi sağlayan ve seans sonunda uygulanabilir bir yön sunan kısa ama yapılandırılmış bir deneyim sunar.
+      </p>
+    </div>
+    <div class="container outcomes-list">
+      {coachingGains.map((gain) => <span>{gain}</span>)}
     </div>
   </section>
 
@@ -145,16 +168,28 @@ const afterSessionFeatures = [
     </div>
   </section>
 
+  <section class="privacy-section">
+    <div class="container privacy-note">
+      <div>
+        <p class="eyebrow">Gizlilik Kontrolü</p>
+        <h2>Seans bitiminde yazışmalarınızı silebilirsiniz.</h2>
+      </div>
+      <p>
+        Koçluk görüşmesi kişisel bir alandır. Perda'da danışan, seans tamamlandıktan sonra tüm seans yazışmalarını silebilir; böylece görüşme sonrası veri kontrolü kullanıcıda kalır.
+      </p>
+    </div>
+  </section>
+
   <section id="deneme" class="trial-section">
     <div class="container trial">
       <div>
         <p class="eyebrow">Ücretsiz Tek Seans</p>
-        <h2>Test aşamasındaki uygulamayı kısa süre için ücretsiz deneyin.</h2>
+        <h2>Koçluk uygulamasını ücretsiz olarak deneyin.</h2>
         <p>
-          Talebinizi e-posta ile iletin. Size deneme seansı için dönüş yapılır ve uygun koçluk odağı belirlenir.
+          Kredi kartı bilgisi istenmez. Ücretsiz seansınızı başlatmak için hesap oluşturmanız yeterli.
         </p>
       </div>
-      <a class="button" href={contactUrl} target="_blank" rel="noopener noreferrer">coach@perda.com.tr adresine başvur</a>
+      <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Ücretsiz hesap oluştur</a>
     </div>
   </section>
 
@@ -307,6 +342,29 @@ const afterSessionFeatures = [
     background: var(--soft);
   }
 
+  .outcomes-section {
+    background: white;
+  }
+
+  .outcomes-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .outcomes-list span {
+    display: grid;
+    min-height: 112px;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px;
+    background: var(--soft);
+    color: var(--teal-dark);
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+
   .scope-list {
     display: flex;
     flex-wrap: wrap;
@@ -335,6 +393,22 @@ const afterSessionFeatures = [
   .after-session-card h3 {
     margin-bottom: 14px;
     font-size: clamp(1.35rem, 2.5vw, 2rem);
+  }
+
+  .privacy-section {
+    background: var(--soft);
+  }
+
+  .privacy-note {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 34px;
+    align-items: center;
+    padding: clamp(30px, 5vw, 52px);
+    border-left: 8px solid var(--teal);
+    border-radius: 8px;
+    background: white;
+    box-shadow: var(--shadow);
   }
 
   .trial-section {
@@ -432,6 +506,7 @@ const afterSessionFeatures = [
     .hero,
     .message-inner,
     .split-heading,
+    .privacy-note,
     .trial,
     .contact {
       grid-template-columns: 1fr;
@@ -443,6 +518,7 @@ const afterSessionFeatures = [
 
     .step-grid,
     .after-session-grid,
+    .outcomes-list,
     .blog-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -455,6 +531,7 @@ const afterSessionFeatures = [
   @media (max-width: 620px) {
     .step-grid,
     .after-session-grid,
+    .outcomes-list,
     .blog-grid {
       grid-template-columns: 1fr;
     }

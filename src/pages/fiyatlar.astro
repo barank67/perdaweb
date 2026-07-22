@@ -1,0 +1,226 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
+
+const plans = [
+  {
+    label: "Ücretsiz",
+    price: "0 TL",
+    description: "Kayıt hediyesi: 1 koçluk seansı ve seans sonrası diyalog çalışması.",
+    sessions: "1 seans",
+    features: ["Kredi kartı bilgisi istenmez", "Seans sonrası diyalog", "Gerçek hikayelerden ilham"],
+  },
+  {
+    label: "Temel",
+    price: "99 TL",
+    oldPrice: "350 TL",
+    description: "1 koçluk seansı. Seans haklarınız 3 ay boyunca geçerlidir.",
+    sessions: "1 seans",
+    features: ["Yapay zeka koçluk görüşmesi", "7-10 soruda odak netleştirme", "Seans yazışmalarını silebilme"],
+  },
+  {
+    label: "Pro",
+    price: "990 TL",
+    oldPrice: "3500 TL",
+    description: "10 koçluk seansı ve her seans sonunda perspektif diyalog çalışması.",
+    sessions: "10 seans",
+    featured: true,
+    features: ["Her seans sonrası diyalog", "Gerçek hikayelerle ilham", "3 ay geçerli seans hakları"],
+  },
+  {
+    label: "Kurumsal",
+    price: "9990 TL",
+    oldPrice: "35000 TL",
+    description: "100 koçluk seansı, seans sonrası perspektif diyalog çalışması ve ekibe seans aktarımı.",
+    sessions: "100 seans",
+    features: ["Ekip kullanımına uygun", "Seans aktarımı", "Kurumsal gelişim hedefleri için kullanım"],
+  },
+];
+---
+
+<BaseLayout
+  title="Fiyatlar | Perda İnsan Kaynakları"
+  description="Perda yapay zeka koçluk uygulaması için ücretsiz, temel, pro ve kurumsal üyelik planlarını inceleyin."
+>
+  <section class="pricing-hero">
+    <div class="container">
+      <p class="eyebrow">Fiyatlar</p>
+      <h1>İhtiyacınıza uygun koçluk planını seçin.</h1>
+      <p class="lead">
+        Ücretsiz seansla başlayabilir, ihtiyacınız arttığında bireysel veya kurumsal planlara geçebilirsiniz. Ödeme yerine önce hesap oluşturma adımına yönlendirilirsiniz.
+      </p>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container pricing-note">
+      <strong>Tanıtıma özel fiyatlar</strong>
+      <span>Seans hakları ücretli planlarda 3 ay boyunca geçerlidir.</span>
+    </div>
+    <div class="container pricing-grid">
+      {plans.map((plan) => (
+        <article class={`price-card ${plan.featured ? "price-card-featured" : ""}`}>
+          {plan.featured && <span class="popular-label">Öne çıkan</span>}
+          <h2>{plan.label}</h2>
+          <div class="price-row">
+            {plan.oldPrice && <s>{plan.oldPrice}</s>}
+            <strong>{plan.price}</strong>
+          </div>
+          <p>{plan.description}</p>
+          <span class="session-count">{plan.sessions}</span>
+          <ul>
+            {plan.features.map((feature) => <li>{feature}</li>)}
+          </ul>
+          <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Hesap oluştur</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="pricing-footer-section">
+    <div class="container pricing-footer">
+      <div>
+        <p class="eyebrow">Ücretsiz Başlangıç</p>
+        <h2>Kredi kartı bilgisi girmeden deneyin.</h2>
+      </div>
+      <p>
+        Ücretsiz seansınızı başlatmak için yalnızca hesap oluşturmanız yeterli. Uygulama içinde koçluk görüşmesini deneyebilir, seans sonunda diyalog ve ilham hikayeleriyle devam edebilirsiniz.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .pricing-hero {
+    background: var(--soft);
+  }
+
+  .pricing-section {
+    background: var(--paper);
+  }
+
+  .pricing-note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border: 1px solid #f0d7b2;
+    border-radius: 8px;
+    padding: 14px 18px;
+    background: #fff4e5;
+    color: #594018;
+  }
+
+  .pricing-note strong {
+    color: var(--coral);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .price-card {
+    position: relative;
+    display: flex;
+    min-height: 470px;
+    flex-direction: column;
+    gap: 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .price-card-featured {
+    border-color: var(--teal);
+    box-shadow: var(--shadow);
+  }
+
+  .popular-label {
+    align-self: flex-start;
+    border-radius: 999px;
+    padding: 6px 10px;
+    color: white;
+    background: var(--teal);
+    font-size: 0.78rem;
+    font-weight: 850;
+  }
+
+  .price-card h2 {
+    font-size: 1.55rem;
+  }
+
+  .price-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .price-row s {
+    color: var(--muted);
+    font-weight: 700;
+  }
+
+  .price-row strong {
+    color: var(--teal-dark);
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .session-count {
+    color: var(--coral);
+    font-weight: 850;
+  }
+
+  .price-card ul {
+    display: grid;
+    gap: 9px;
+    margin: 0 0 8px;
+    padding-left: 20px;
+    color: #344340;
+  }
+
+  .price-card .button {
+    margin-top: auto;
+  }
+
+  .pricing-footer-section {
+    background: #122321;
+  }
+
+  .pricing-footer {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .pricing-footer h2,
+  .pricing-footer p {
+    color: white;
+  }
+
+  @media (max-width: 1050px) {
+    .pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 680px) {
+    .pricing-grid,
+    .pricing-footer {
+      grid-template-columns: 1fr;
+    }
+
+    .price-card {
+      min-height: auto;
+    }
+  }
+</style>

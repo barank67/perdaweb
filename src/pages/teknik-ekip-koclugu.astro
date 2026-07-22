@@ -1,0 +1,292 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
+const contactUrl =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=Teknik%20ekip%20ko%C3%A7lu%C4%9Fu%20hakk%C4%B1nda";
+
+const gains = [
+  "Bütçenizi verimli kullanmak.",
+  "Yazılımcı ve mühendislerin tükenmişlik ve karar tıkanıklıklarını 7/24 çözmek.",
+  "Ekip içinde ve dışında iletişimi güçlendirmek.",
+  "Teknik ekibinizin liderlik becerilerini geliştirmek.",
+];
+
+const scenarios = [
+  {
+    title: "Uzmanlıktan Liderliğe Geçiş",
+    quote: "Artık kod yazmıyorum, ekip yönetiyorum ama iletişimde zorlanıyorum.",
+    text: "Teknik uzmanların liderlik rolüne geçerken yaşadığı iletişim, delegasyon ve karar paylaşımı konularını yapılandırır.",
+  },
+  {
+    title: "Karmaşık Karar Anları",
+    quote: "Farklı seçenekler arasında kaldım, ilerleyemiyorum.",
+    text: "Seçenekleri ayrıştırmayı, varsayımları görünür kılmayı ve somut bir sonraki adımı belirlemeyi destekler.",
+  },
+  {
+    title: "İş-Yaşam Dengesi ve Tükenmişlik",
+    quote: "Beklenmedik zamanlarda gelen acil işler veya kısıtlı sürede teslimat stresiyle nasıl başa çıkacağım?",
+    text: "Stresin kaynağını netleştirir, sürdürülebilir aksiyonlar ve sınır koyma seçenekleri üzerinde çalışır.",
+  },
+];
+---
+
+<BaseLayout
+  title="Teknik Ekipler İçin Yapay Zeka Koçluk | Perda İnsan Kaynakları"
+  description="Perda AI Koç, yazılımcı ve mühendislerin kendi ritimlerinde kariyer, iletişim ve liderlik becerilerini geliştirmelerini sağlar."
+>
+  <section class="lp-hero">
+    <div class="container lp-hero-inner">
+      <div>
+        <p class="eyebrow">Teknik Ekipler İçin AI Koçluk</p>
+        <h1>Teknik ekibinizi geleneksel koçluk programlarına dahil etmekte zorlanıyor musunuz?</h1>
+        <p class="lead">
+          Perda AI Koç, analitik zekaya sahip çalışanların kendi ritimlerinde, analitik bir metodolojiyle kariyer, iletişim ve liderlik becerilerini geliştirmelerini sağlar.
+        </p>
+        <div class="lp-actions">
+          <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Ücretsiz seans başlat</a>
+          <a class="button-secondary" href={contactUrl} target="_blank" rel="noopener noreferrer">Kurumsal bilgi al</a>
+        </div>
+      </div>
+      <div class="lp-signal-card">
+        <span>7/24 erişim</span>
+        <strong>Karar tıkanıklığı, tükenmişlik ve iletişim konuları için yapılandırılmış koçluk.</strong>
+        <p>Kullanıcı, seans bitiminde tüm yazışmalarını silebilir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Kazançlarınız</p>
+        <h2>Teknik ekip gelişimini daha erişilebilir hale getirin.</h2>
+      </div>
+      <p>
+        Geleneksel koçluk programlarına katılım göstermekte zorlanan teknik profiller için daha esnek, daha ölçülü ve daha düşük bariyerli bir gelişim deneyimi.
+      </p>
+    </div>
+    <div class="container gain-grid">
+      {gains.map((gain) => (
+        <article class="gain-card">
+          <p>{gain}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="privacy-band">
+    <div class="container privacy-row">
+      <div>
+        <p class="eyebrow">Gizlilik</p>
+        <h2>Kontrol kullanıcıda kalır.</h2>
+      </div>
+      <p>
+        Kullanıcılar her seans bitiminde verilerini silebilir. Yazışmaları okuduktan sonra saklamayı ya da silmeyi kendileri seçer.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Kullanım Senaryoları</p>
+        <h2>Teknik ekiplerin gerçek zorlanma anlarına göre tasarlandı.</h2>
+      </div>
+      <p>
+        Perda AI Koç, teknik çalışanların yalnızca performansına değil, karar kalitesine, iletişim becerilerine ve sürdürülebilir çalışma ritmine odaklanır.
+      </p>
+    </div>
+    <div class="container scenario-grid">
+      {scenarios.map((scenario, index) => (
+        <article class="scenario-card">
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <h3>{scenario.title}</h3>
+          <blockquote>{scenario.quote}</blockquote>
+          <p>{scenario.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="lp-cta-section">
+    <div class="container lp-cta">
+      <div>
+        <p class="eyebrow">Ücretsiz Deneyin</p>
+        <h2>Teknik ekibiniz için düşük bariyerli bir başlangıç yapın.</h2>
+      </div>
+      <p>
+        Kredi kartı bilgisi gerekmeden ücretsiz seans başlatılabilir. Kurumsal kullanım için ekibinize uygun planı birlikte netleştirebiliriz.
+      </p>
+      <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Hesap oluştur</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .lp-hero {
+    min-height: calc(100vh - 82px);
+    display: grid;
+    align-items: center;
+    background: var(--soft);
+  }
+
+  .lp-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    gap: clamp(28px, 5vw, 70px);
+    align-items: center;
+  }
+
+  .lp-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .lp-signal-card {
+    display: grid;
+    gap: 18px;
+    border-radius: 8px;
+    padding: clamp(28px, 4vw, 42px);
+    color: white;
+    background: #122321;
+    box-shadow: var(--shadow);
+  }
+
+  .lp-signal-card span {
+    color: #f0b49f;
+    font-size: 0.82rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .lp-signal-card strong {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.12;
+  }
+
+  .lp-signal-card p {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .gain-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .gain-card {
+    display: grid;
+    min-height: 190px;
+    align-items: end;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .gain-card p {
+    color: var(--teal-dark);
+    font-size: 1.05rem;
+    font-weight: 850;
+  }
+
+  .privacy-band {
+    background: var(--teal-dark);
+  }
+
+  .privacy-row {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .privacy-row h2,
+  .privacy-row p {
+    color: white;
+  }
+
+  .scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .scenario-card {
+    display: grid;
+    gap: 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .scenario-card span {
+    color: var(--coral);
+    font-weight: 900;
+  }
+
+  .scenario-card blockquote {
+    margin: 0;
+    border-left: 4px solid var(--coral);
+    padding-left: 14px;
+    color: var(--ink);
+    font-size: 1.08rem;
+    font-weight: 800;
+    line-height: 1.35;
+  }
+
+  .lp-cta-section {
+    background: #122321;
+  }
+
+  .lp-cta {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .lp-cta h2,
+  .lp-cta p {
+    color: white;
+  }
+
+  .lp-cta .button {
+    background: var(--coral);
+  }
+
+  @media (max-width: 980px) {
+    .lp-hero {
+      min-height: auto;
+    }
+
+    .lp-hero-inner,
+    .privacy-row,
+    .lp-cta {
+      grid-template-columns: 1fr;
+    }
+
+    .gain-grid,
+    .scenario-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lp-cta .button {
+      justify-self: start;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .gain-grid,
+    .scenario-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

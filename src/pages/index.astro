@@ -27,8 +27,12 @@ const steps = [
     text: "Seans sonunda kararlarınızı, fark ettiklerinizi ve sonraki adımlarınızı daha net görürsünüz.",
   },
   {
-    title: "İsterseniz süpervizör ekleyin",
-    text: "Gerçek koç desteği, ana koçluk yerine değil, süreci değerlendiren ek katkı olarak konumlanır.",
+    title: "Bakış açınızı değiştirin",
+    text: "Seans sonrası diyalog uygulamasında, benzer konuda destek veren yol gösteren rolüne geçerek konuyu farklı taraftan görürsünüz.",
+  },
+  {
+    title: "Gerçek hikayelerden ilham alın",
+    text: "Benzer duygular yaşamış insanların bu süreci nasıl fırsata çevirdiğini anlatan gerçek hikayelerle seansı tamamlayabilirsiniz.",
   },
 ];
 
@@ -41,6 +45,17 @@ const scopes = [
   "İş-yaşam dengesi",
   "Bireysel gelişim",
   "Kurumsal gelişim hedefleri",
+];
+
+const afterSessionFeatures = [
+  {
+    title: "Yol gösteren rolüne geçin",
+    text: "Koçluk seansı tamamlandıktan sonra danışan, benzer konuda destek veren kişi rolüne girer. Bu diyalog deneyimi, kişinin kendi konusuna dışarıdan bakmasını ve yeni seçenekleri fark etmesini kolaylaştırır.",
+  },
+  {
+    title: "Gerçek hikayelerle ilham alın",
+    text: "Seans sonunda benzer duygular yaşamış insanların gerçek hikayeleri paylaşılır. Danışan, zorlayıcı bir durumu fırsata çevirmiş kişilerin deneyimlerinden ilham alarak kendi adımını daha net düşünebilir.",
+  },
 ];
 ---
 
@@ -111,14 +126,22 @@ const scopes = [
   </section>
 
   <section>
-    <div class="container supervisor">
+    <div class="container split-heading">
       <div>
-        <p class="eyebrow">Süpervizör Koç Seçeneği</p>
-        <h2>İsterseniz gerçek koçtan ek katkı alabilirsiniz.</h2>
+        <p class="eyebrow">Seans Sonrası Deneyim</p>
+        <h2>Görüşme bitince düşünme süreci devam eder.</h2>
       </div>
       <p>
-        Ana koçluk deneyimi tamamen yapay zeka tarafından yapılır. Gerçek koç, kullanıcı talep ettiğinde sürece süpervizör olarak katkı verir; görüşmenin odağını, aksiyon planını veya gelişim yönünü değerlendirebilir.
+        Perda, koçluk seansını yalnızca soru-cevap görüşmesi olarak bırakmaz. Danışanın bakış açısını genişletmesini ve yaşadığı durumu yeni bir anlamla ele almasını destekleyen iki tamamlayıcı uygulama sunar.
       </p>
+    </div>
+    <div class="container grid after-session-grid">
+      {afterSessionFeatures.map((feature) => (
+        <article class="card after-session-card">
+          <h3>{feature.title}</h3>
+          <p>{feature.text}</p>
+        </article>
+      ))}
     </div>
   </section>
 
@@ -261,7 +284,7 @@ const scopes = [
   }
 
   .step-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .step-card {
@@ -299,14 +322,19 @@ const scopes = [
     font-weight: 700;
   }
 
-  .supervisor {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 34px;
-    padding: clamp(34px, 5vw, 58px);
-    border-left: 8px solid var(--coral);
-    background: white;
-    box-shadow: var(--shadow);
+  .after-session-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .after-session-card {
+    min-height: 250px;
+    padding: clamp(24px, 4vw, 38px);
+    border-top: 6px solid var(--coral);
+  }
+
+  .after-session-card h3 {
+    margin-bottom: 14px;
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
   }
 
   .trial-section {
@@ -404,7 +432,6 @@ const scopes = [
     .hero,
     .message-inner,
     .split-heading,
-    .supervisor,
     .trial,
     .contact {
       grid-template-columns: 1fr;
@@ -415,6 +442,7 @@ const scopes = [
     }
 
     .step-grid,
+    .after-session-grid,
     .blog-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -426,6 +454,7 @@ const scopes = [
 
   @media (max-width: 620px) {
     .step-grid,
+    .after-session-grid,
     .blog-grid {
       grid-template-columns: 1fr;
     }

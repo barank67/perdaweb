@@ -17,6 +17,6 @@ Yapay zeka ile koçluk, kişinin hedefini daha açık ifade etmesine, seçenekle
 
 Yapay zeka koç, kullanıcının verdiği yanıtlara göre takip soruları üretir, tekrar eden düşünce kalıplarını görünür kılar ve aksiyon seçenekleri önerir. Bu süreçte görüşme odağı korunur; kullanıcı yalnızca konuşmuş olmaz, aynı zamanda kararlarını düzenlemeye başlar.
 
-## İnsan desteği nerede devreye girer?
+## Seans sonrası ne olur?
 
-Perda'da ana koçluk deneyimi yapay zeka tarafından yürütülür. İsteyen kullanıcılar, gerçek koçtan süpervizör olarak ek katkı alma seçeneğini değerlendirebilir. Bu katkı, görüşmenin yerine geçmez; sürecin yönü ve çıktıları için destekleyici bir değerlendirme sunar.
+Perda'da ana koçluk deneyimi yapay zeka tarafından yürütülür. Seans tamamlandıktan sonra danışan, kendi konusuna farklı bir rolden bakmasını sağlayan diyalog uygulamaları ve benzer duygular yaşamış insanların gerçek hikayeleriyle düşünme sürecini sürdürebilir.

@@ -1,0 +1,345 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
+
+const valuePoints = [
+  "İlk seans tamamen ücretsizdir; kredi kartı bilgisi gerekmez.",
+  "Sonraki seanslar 350 TL yerine 99 TL tanıtım fiyatıyla sunulur.",
+  "Sadece mail adresiyle kaydolabilir, seans sonunda sohbeti silebilirsiniz.",
+  "7/24 erişebilir, uygun ücretle seans alıp sonra kullanabilirsiniz.",
+  "Abonelik gerekmez; harcama kontrolü tamamen sizde, kredi kartı bilgisi saklamıyoruz.",
+];
+
+const method = [
+  "Size akıl vermez, sorular sorar.",
+  "Olaya değil, altta yatan inançlara odaklanır.",
+  "Her zaman çözüm odağında tutmayı hedefler.",
+  "7-10 soruda seansı sonuçlandırır.",
+];
+
+const includedFeatures = [
+  {
+    title: "Bakış açısı değiştirme egzersizleri",
+    text: "Seans sonunda konuya farklı bir rolden bakmanızı sağlayan yapılandırılmış diyalog egzersizleri.",
+  },
+  {
+    title: "İlham veren gerçek yaşam hikayeleri",
+    text: "Benzer duygular yaşamış insanların deneyimlerinden ilham alarak kendi yolunuzu daha net görmenizi destekler.",
+  },
+  {
+    title: "Harekete geçiren egzersizler",
+    text: "Farkındalığı yalnızca düşüncede bırakmadan küçük, uygulanabilir ve somut adımlara dönüştürür.",
+  },
+];
+---
+
+<BaseLayout
+  title="Perda Online Yaşam Koçu | Ücretsiz İlk Seans"
+  description="Perda Online Yaşam Koçu ile kredi kartı gerekmeden ücretsiz ilk seansınızı başlatın. Sonraki seanslar tanıtım fiyatıyla 99 TL."
+>
+  <section class="life-hero">
+    <div class="container life-hero-inner">
+      <div>
+        <p class="eyebrow">Perda Online Yaşam Koçu</p>
+        <h1>Hayatınızda değiştirmek istediğiniz bir şey var mı?</h1>
+        <p class="lead">
+          İlk seans tamamen ücretsiz. Kredi kartı bilgisi gerekmeden, yalnızca hesabınızı oluşturarak yapay zeka destekli koçluk deneyimini başlatabilirsiniz.
+        </p>
+        <div class="life-actions">
+          <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Ücretsiz denemek için hesap oluştur</a>
+          <a class="button-secondary" href="#yontem">Koçluk yöntemini incele</a>
+        </div>
+      </div>
+      <aside class="price-panel">
+        <span>Tanıtım fiyatı</span>
+        <div class="price-line">
+          <s>350 TL</s>
+          <strong>99 TL</strong>
+        </div>
+        <p>İlk seans ücretsizdir. Sonraki seansları abonelik olmadan, ihtiyaç duydukça satın alabilirsiniz.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section>
+    <div class="container value-grid">
+      {valuePoints.map((point) => (
+        <article class="value-card">
+          <p>{point}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="yontem" class="method-section">
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Koçluk Yöntemi</p>
+        <h2>Tavsiye yerine doğru sorular.</h2>
+      </div>
+      <p>
+        Perda Online Yaşam Koçu, sizi hazır cevaplara yönlendirmek yerine kendi çözümünüzü bulmanız için düşünme alanı açar.
+      </p>
+    </div>
+    <div class="container method-list">
+      {method.map((item, index) => (
+        <article class="method-item">
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <p>{item}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Ücrete Dahil</p>
+        <h2>Koçluk seansını destekleyen ek çalışmalar.</h2>
+      </div>
+      <p>
+        Seans tamamlandığında yalnızca konuşulanlarla kalmazsınız; bakış açınızı değiştiren, ilham veren ve harekete geçiren çalışmalarla devam edebilirsiniz.
+      </p>
+    </div>
+    <div class="container included-grid">
+      {includedFeatures.map((feature) => (
+        <article class="included-card">
+          <h3>{feature.title}</h3>
+          <p>{feature.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="security-section">
+    <div class="container security-row">
+      <div>
+        <p class="eyebrow">Güvenlik ve Gizlilik</p>
+        <h2>Hesap, ödeme ve sohbet kontrolü sizde.</h2>
+      </div>
+      <p>
+        Sadece mail adresiyle kaydolabilirsiniz. Seans sonunda sohbeti silebilirsiniz. Abonelik yoktur; kredi kartı bilgisi saklamıyoruz.
+      </p>
+    </div>
+  </section>
+
+  <section class="life-cta-section">
+    <div class="container life-cta">
+      <div>
+        <p class="eyebrow">Ücretsiz İlk Seans</p>
+        <h2>Ücretsiz denemek için hemen hesabınızı oluşturun.</h2>
+      </div>
+      <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Hesap oluştur</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .life-hero {
+    min-height: calc(100vh - 82px);
+    display: grid;
+    align-items: center;
+    background: var(--soft);
+  }
+
+  .life-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: center;
+  }
+
+  .life-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .price-panel {
+    display: grid;
+    gap: 18px;
+    border-radius: 8px;
+    padding: clamp(28px, 4vw, 42px);
+    color: white;
+    background: #122321;
+    box-shadow: var(--shadow);
+  }
+
+  .price-panel span {
+    color: #f0b49f;
+    font-size: 0.82rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .price-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: baseline;
+  }
+
+  .price-line s {
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+
+  .price-line strong {
+    color: white;
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 0.95;
+  }
+
+  .price-panel p {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .value-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+
+  .value-card {
+    display: grid;
+    min-height: 180px;
+    align-items: end;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .value-card p {
+    color: var(--teal-dark);
+    font-weight: 850;
+  }
+
+  .method-section {
+    background: var(--soft);
+  }
+
+  .method-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .method-item {
+    display: grid;
+    gap: 28px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px;
+    background: white;
+  }
+
+  .method-item span {
+    color: var(--coral);
+    font-weight: 900;
+  }
+
+  .method-item p {
+    color: var(--ink);
+    font-size: 1.05rem;
+    font-weight: 850;
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .included-card {
+    border: 1px solid var(--line);
+    border-top: 6px solid var(--coral);
+    border-radius: 8px;
+    padding: 24px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .included-card h3 {
+    margin-bottom: 12px;
+  }
+
+  .security-section {
+    background: var(--teal-dark);
+  }
+
+  .security-row {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .security-row h2,
+  .security-row p {
+    color: white;
+  }
+
+  .life-cta-section {
+    background: #122321;
+  }
+
+  .life-cta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .life-cta h2 {
+    color: white;
+  }
+
+  .life-cta .button {
+    background: var(--coral);
+  }
+
+  @media (max-width: 1050px) {
+    .value-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 980px) {
+    .life-hero {
+      min-height: auto;
+    }
+
+    .life-hero-inner,
+    .security-row,
+    .life-cta {
+      grid-template-columns: 1fr;
+    }
+
+    .method-list,
+    .included-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .life-cta .button {
+      justify-self: start;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .value-grid,
+    .method-list,
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .value-card {
+      min-height: auto;
+    }
+  }
+</style>

@@ -5,9 +5,9 @@ const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
 
 const valuePoints = [
   "İlk seans tamamen ücretsizdir; kredi kartı bilgisi gerekmez.",
-  "Sonraki seanslar 350 TL yerine 99 TL tanıtım fiyatıyla sunulur.",
+  "Devam etmek isterseniz seansları abonelik olmadan ihtiyaç duydukça satın alabilirsiniz.",
   "Sadece mail adresiyle kaydolabilir, seans sonunda sohbeti silebilirsiniz.",
-  "7/24 erişebilir, uygun ücretle seans alıp sonra kullanabilirsiniz.",
+  "7/24 erişebilir, seans hakkınızı satın aldıktan sonra dilediğiniz zaman kullanabilirsiniz.",
   "Abonelik gerekmez; harcama kontrolü tamamen sizde, kredi kartı bilgisi saklamıyoruz.",
 ];
 
@@ -36,7 +36,7 @@ const includedFeatures = [
 
 <BaseLayout
   title="Perda Online Yaşam Koçu | Ücretsiz İlk Seans"
-  description="Perda Online Yaşam Koçu ile kredi kartı gerekmeden ücretsiz ilk seansınızı başlatın. Sonraki seanslar tanıtım fiyatıyla 99 TL."
+  description="Perda Online Yaşam Koçu ile kredi kartı gerekmeden ücretsiz ilk seansınızı başlatın. Abonelik olmadan, ihtiyaç duydukça seans alabilirsiniz."
 >
   <section class="life-hero">
     <div class="container life-hero-inner">
@@ -51,14 +51,6 @@ const includedFeatures = [
           <a class="button-secondary" href="#yontem">Koçluk yöntemini incele</a>
         </div>
       </div>
-      <aside class="price-panel">
-        <span>Tanıtım fiyatı</span>
-        <div class="price-line">
-          <s>350 TL</s>
-          <strong>99 TL</strong>
-        </div>
-        <p>İlk seans ücretsizdir. Sonraki seansları abonelik olmadan, ihtiyaç duydukça satın alabilirsiniz.</p>
-      </aside>
     </div>
   </section>
 
@@ -95,7 +87,7 @@ const includedFeatures = [
   <section>
     <div class="container split-heading">
       <div>
-        <p class="eyebrow">Ücrete Dahil</p>
+        <p class="eyebrow">Seansa Dahil</p>
         <h2>Koçluk seansını destekleyen ek çalışmalar.</h2>
       </div>
       <p>
@@ -145,7 +137,7 @@ const includedFeatures = [
 
   .life-hero-inner {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    grid-template-columns: minmax(0, 820px);
     gap: clamp(28px, 5vw, 72px);
     align-items: center;
   }
@@ -155,47 +147,6 @@ const includedFeatures = [
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 30px;
-  }
-
-  .price-panel {
-    display: grid;
-    gap: 18px;
-    border-radius: 8px;
-    padding: clamp(28px, 4vw, 42px);
-    color: white;
-    background: #122321;
-    box-shadow: var(--shadow);
-  }
-
-  .price-panel span {
-    color: #f0b49f;
-    font-size: 0.82rem;
-    font-weight: 850;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .price-line {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: baseline;
-  }
-
-  .price-line s {
-    color: rgba(255, 255, 255, 0.58);
-    font-size: 1.4rem;
-    font-weight: 800;
-  }
-
-  .price-line strong {
-    color: white;
-    font-size: clamp(3rem, 7vw, 5rem);
-    line-height: 0.95;
-  }
-
-  .price-panel p {
-    color: rgba(255, 255, 255, 0.78);
   }
 
   .value-grid {

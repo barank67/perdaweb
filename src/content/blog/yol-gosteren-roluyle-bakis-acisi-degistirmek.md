@@ -25,4 +25,4 @@ Perda’nın bu farklı yapısı, koçluk seansını tek bir sohbet olarak bıra
 
 Bu deneyim tekrarlandığında danışan kendi iç diyaloğunu da fark etmeye başlayabilir. Başkasına daha anlayışlı, kendine daha sert konuştuğunu görmek bile önemli bir farkındalık olabilir. Koçluk uygulaması bu farkı görünür kıldığında, danışan kendisine de daha yapıcı bir dille yaklaşmayı deneyebilir.
 
-Perda'da ilk seans ücretsizdir. Perspektif diyalog çalışmalarını deneyebilir, devam etmek isterseniz seansları ihtiyaç duydukça satın alabilirsiniz.
+Perda'da koçluk seansı satın alarak perspektif diyalog çalışmalarını kullanabilirsiniz. İlk seans sonrası memnun kalmazsanız 14 gün içinde tam iade hakkınız vardır.

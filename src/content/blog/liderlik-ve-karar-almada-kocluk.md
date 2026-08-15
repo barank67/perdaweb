@@ -33,4 +33,4 @@ Bu özellikle teknik ekiplerde değerlidir. Analitik zekaya sahip çalışanlar 
 
 Bir başka önemli nokta da tükenmişlik ve karar yorgunluğudur. Lider her gün küçük büyük çok sayıda karar verdiğinde zihinsel enerji azalabilir. Böyle anlarda danışanın ihtiyaç duyduğu şey daha fazla bilgi değil, düşüncelerini sadeleştirecek bir yapı olabilir. Perda’nın 7/24 erişilebilir yapısı, karar baskısının yoğunlaştığı anlarda düşünme alanı açmaya yardım eder.
 
-Liderlikte her karar kusursuz olmayabilir. Önemli olan, kararın hangi değerlerle verildiğini ve bir sonraki öğrenmenin nasıl yapılacağını görebilmektir. Perda Online Yaşam Koçu ile ilk seansı ücretsiz deneyebilir, devam etmek isterseniz seansları abonelik olmadan satın alabilirsiniz.
+Liderlikte her karar kusursuz olmayabilir. Önemli olan, kararın hangi değerlerle verildiğini ve bir sonraki öğrenmenin nasıl yapılacağını görebilmektir. Perda Online Yaşam Koçu ile koçluk seansınızı başlatabilir, ilk seans sonrası memnun kalmazsanız 14 gün içinde tam iade hakkınızı kullanabilirsiniz.

@@ -14,13 +14,13 @@ const canonical = new URL(Astro.url.pathname, "https://perda.com.tr");
 const navItems = [
   { href: "/#nasil-calisir", label: "Nasıl Çalışır" },
   { href: "/#kapsam", label: "Kapsam" },
-  { href: "/#deneme", label: "Ücretsiz Deneme" },
+  { href: "/#seans", label: "Koçluk Seansı" },
   { href: "/fiyatlar", label: "Fiyatlar" },
   { href: "/blog", label: "Blog" },
   { href: "/#iletisim", label: "İletişim" },
 ];
 const contactUrl =
-  "https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=%C3%9Ccretsiz%20deneme%20seans%C4%B1%20talebi";
+  "https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=Ko%C3%A7luk%20seans%C4%B1%20hakk%C4%B1nda";
 const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
 ---
 
@@ -58,7 +58,7 @@ const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
       <nav aria-label="Ana menü">
         {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
       </nav>
-      <a class="header-cta" href={signupUrl} target="_blank" rel="noopener noreferrer">Deneme Seansı</a>
+      <a class="header-cta" href={signupUrl} target="_blank" rel="noopener noreferrer">Koçluk Seansı</a>
     </header>
     <main>
       <slot />

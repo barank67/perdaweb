@@ -27,4 +27,4 @@ Danışan “aslında neyi kaybetmekten korkuyorum?” sorusuna yaklaştığınd
 
 Hayatınızda değiştirmek istediğiniz bir şey var mı? Bu soru bazen büyük bir dönüşüm çağrısı gibi duyulur, ama çoğu zaman küçük bir dürüstlük davetidir. Danışan tek seansta bütün hayatını değiştirmek zorunda değildir. Sadece bir konuda kendi seçimini daha net duymaya başlayabilir. Netleşen seçim, küçük bir aksiyona dönüştüğünde değişim daha uygulanabilir hale gelir.
 
-Perda Online Yaşam Koçu ile ilk seansınızı ücretsiz deneyebilir, sonraki seansları abonelik olmadan ihtiyaç duydukça satın alabilirsiniz. Kredi kartı bilgisi gerekmeden hesabınızı oluşturun.
+Perda Online Yaşam Koçu ile koçluk seansı satın alarak başlayabilir, sonraki seansları abonelik olmadan ihtiyaç duydukça alabilirsiniz. İlk seans sonrası memnun kalmazsanız 14 gün içinde tam iade hakkınız vardır.

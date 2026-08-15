@@ -29,4 +29,4 @@ Elbette her hikaye her danışana aynı şekilde dokunmaz. Önemli olan hikayeyi
 
 Danışan hikayeyi bitirdiğinde kendi sorusuna döner: Ben bu durumdan nasıl bir anlam çıkarabilirim? Sorun hâlâ orada olabilir; fakat ona bakış biraz değişmiş olabilir. İlhamın değeri de tam burada ortaya çıkar.
 
-Perda Online Yaşam Koçu ile ilk seansınızı ücretsiz deneyebilir, seans sonunda size uygun ilham hikayeleriyle düşünme sürecinizi sürdürebilirsiniz. Devam etmek isterseniz seansları abonelik olmadan satın alabilirsiniz.
+Perda Online Yaşam Koçu ile koçluk seansınızı başlatabilir, seans sonunda size uygun ilham hikayeleriyle düşünme sürecinizi sürdürebilirsiniz. İlk seans sonrası memnun kalmazsanız 14 gün içinde tam iade hakkınız vardır.

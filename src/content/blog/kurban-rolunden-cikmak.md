@@ -29,4 +29,4 @@ Danışan bu küçük alanı gördüğünde duygu değişmeye başlayabilir. Öf
 
 Bu nedenle kurban rolünden çıkmak sert bir öz eleştiri değil, daha olgun bir sahiplenmedir. Danışan “bana ne yaptılar?” sorusuna takılı kalmadan “bundan sonra kendim için ne yapabilirim?” sorusuna yaklaştığında, hikayenin yönü değişmeye başlayabilir.
 
-İlk seansınızı ücretsiz başlatabilir, devam etmek isterseniz seansları abonelik olmadan satın alabilirsiniz.
+Koçluk seansınızı satın alarak başlayabilir, ilk seans sonrası memnun kalmazsanız 14 gün içinde ödemenizin tamamını geri alabilirsiniz.

@@ -35,4 +35,4 @@ Seans sonrasında danışan, benzer konuda destek veren yol gösteren rolüne ge
 
 Danışan ayrıca kendi rolünü fark ettiğinde daha özgür hissedebilir. “O böyle yaptığı için ben böyleyim” çizgisinden “bu durumda ben hangi tepkiyi seçebilirim?” çizgisine geçmek, ilişkiyi hemen düzeltmeyebilir; fakat kişinin kendi etki alanını büyütür. Perda’nın soru temelli yapısı, bu geçişi tavsiye vererek değil, danışanın kendi cevabını duymasına alan açarak destekler.
 
-Perda Online Yaşam Koçu’nda ilk seans ücretsizdir. Kredi kartı bilgisi gerekmeden hesap oluşturabilir, ilişki koçluğu odağını deneyebilir ve devam etmek isterseniz seansları abonelik olmadan satın alabilirsiniz.
+Perda Online Yaşam Koçu’nda koçluk seansı satın alarak ilişki koçluğu odağında başlayabilirsiniz. İlk seans sonrası memnun kalmazsanız 14 gün içinde tam iade hakkınız vardır.

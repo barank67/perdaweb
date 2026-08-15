@@ -25,4 +25,4 @@ Bu yaklaşım, tavsiye vermekten farklıdır. Tavsiye genellikle dışarıdan ge
 
 Seans sonunda hikayelerle desteklenen bu yapı, danışanın düşünme sürecini konuşma bittikten sonra da sürdürebilir. Çünkü iyi bir hikaye bazen gün içinde yeniden hatırlanır; bir cümlenin, bir seçimin veya bir küçük adımın kapısını aralayabilir.
 
-Perda Online Yaşam Koçu ile ilk seansınızı ücretsiz deneyebilir, seans sonunda size uygun ilham hikayeleriyle süreci sürdürebilirsiniz. Devam etmek isterseniz seansları abonelik olmadan satın alabilirsiniz.
+Perda Online Yaşam Koçu ile koçluk seansınızı başlatabilir, seans sonunda size uygun ilham hikayeleriyle süreci sürdürebilirsiniz. İlk seans sonrası memnun kalmazsanız 14 gün içinde tam iade hakkınız vardır.

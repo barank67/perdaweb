@@ -29,4 +29,4 @@ Bu yapı, koçluk uygulamasıyla birlikte kullanıldığında daha anlamlı hale
 
 Hayatınızda değiştirmek istediğiniz bir şey var mı? Bu soruya verilen cevap bazen büyük bir hedef gibi başlar, ama alışkanlığa dönüşmesi için küçük bir davranışa ihtiyaç duyar. Perda’nın farklı uygulama yapısı, danışanın hem farkındalığını hem de günlük tekrarını aynı gelişim yolculuğunda bir araya getirmeyi hedefler.
 
-Perda'da ilk koçluk seansınızı ücretsiz deneyebilir; devam etmek istediğinizde seansları abonelik olmadan satın alarak süreci sürdürebilirsiniz.
+Perda'da koçluk seansı satın alarak süreci başlatabilir; ilk seansı tamamladıktan sonra memnun kalmazsanız 14 gün içinde ödemenizin tamamını geri alabilirsiniz.

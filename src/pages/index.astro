@@ -8,9 +8,9 @@ const posts = (await getCollection("blog")).sort(
 
 const getPostSlug = (id: string) => id.replace(/\.md$/, "");
 
-const emailSubject = "Ücretsiz deneme seansı talebi";
+const emailSubject = "Koçluk seansı hakkında";
 const emailBody =
-  "Merhaba Perda İnsan Kaynakları,\n\nYapay zeka ile koçluk uygulaması için ücretsiz deneme seansı talep ediyorum.\n\nAd Soyad:\nTelefon:\nKoçluk odağım:\n";
+  "Merhaba Perda İnsan Kaynakları,\n\nYapay zeka ile koçluk uygulaması hakkında bilgi almak istiyorum.\n\nAd Soyad:\nTelefon:\nKoçluk odağım:\n";
 const contactUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
 
@@ -78,16 +78,16 @@ const faqs = [
       "Seans bitiminde verileri silebileceğiniz bir buton görünür. Okumanız bittiğinde isterseniz silebilir, isterseniz saklayabilirsiniz. Siz sil demeden yazışmalarınız silinmez.",
   },
   {
-    question: "Ücretsiz seans sonrası ücretlendirme nasıl yapılıyor?",
+    question: "İlk seans sonrası memnun kalmazsam ne olur?",
     answer:
-      "Ücretsiz seans sonrasında yeni seanslar satın alabileceğiniz bir sayfaya yönlendirilirsiniz. Tekrar eden ödeme, abonelik yoktur. Siz ne zaman isterseniz o zaman tekrar satın alırsınız.",
+      "İlk koçluk seansınızı tamamladıktan sonra memnun kalmazsanız satın alma tarihinden itibaren 14 gün içinde ödemenin tamamını geri alabilirsiniz. Tekrar eden ödeme ve abonelik yoktur.",
   },
 ];
 ---
 
 <BaseLayout
   title="Yapay Zeka ile Koçluk Uygulaması | Perda İnsan Kaynakları"
-  description="Perda İnsan Kaynakları, bireysel ve kurumsal hedefler için yapay zeka destekli koçluk deneyimi sunar. Kredi kartı bilgisi gerekmeden ücretsiz seansınızı başlatın."
+  description="Perda İnsan Kaynakları, bireysel ve kurumsal hedefler için yapay zeka destekli koçluk seansları sunar. Memnun kalmazsanız ilk seans sonrası 14 gün içinde iade hakkınız vardır."
 >
   <section class="hero">
     <div class="hero-copy">
@@ -97,7 +97,7 @@ const faqs = [
         Hayatınızda değiştirmek istediğiniz bir şey var mı? Perda, bireysel ve kurumsal hedefler için yapılandırılmış, erişilebilir ve insan odaklı bir yapay zeka koçluk uygulamasıdır.
       </p>
       <div class="hero-actions">
-        <a class="button" href={contactUrl} target="_blank" rel="noopener noreferrer">Ücretsiz Deneme Seansı Al</a>
+        <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Koçluk Seansı Al</a>
         <a class="button-secondary" href="#nasil-calisir">Nasıl Çalışır?</a>
       </div>
     </div>
@@ -205,7 +205,7 @@ const faqs = [
         <h2>Sıkça sorulan sorular.</h2>
       </div>
       <p>
-        Koçluk yaklaşımı, veri kontrolü ve ücretsiz seans sonrası ücretlendirme hakkında en çok merak edilen konular.
+        Koçluk yaklaşımı, veri kontrolü ve ilk seans sonrası iade hakkı hakkında en çok merak edilen konular.
       </p>
     </div>
     <div class="container faq-list">
@@ -218,16 +218,16 @@ const faqs = [
     </div>
   </section>
 
-  <section id="deneme" class="trial-section">
+  <section id="seans" class="trial-section">
     <div class="container trial">
       <div>
-        <p class="eyebrow">Ücretsiz Tek Seans</p>
-        <h2>Koçluk uygulamasını ücretsiz olarak deneyin.</h2>
+        <p class="eyebrow">Koçluk Seansı</p>
+        <h2>İlk seansı tamamlayın; memnun kalmazsanız ödemenizi geri alın.</h2>
         <p>
-          Kredi kartı bilgisi istenmez. Ücretsiz seansınızı başlatmak için hesap oluşturmanız yeterli.
+          Satın alma tarihinden itibaren 14 gün içinde iade hakkınız vardır. Abonelik yoktur; seans paketlerini ihtiyaç duydukça satın alırsınız.
         </p>
       </div>
-      <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Ücretsiz hesap oluştur</a>
+      <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Hesap oluştur</a>
     </div>
   </section>
 
@@ -260,7 +260,7 @@ const faqs = [
       <div>
         <p class="eyebrow">İletişim</p>
         <h2>Perda İnsan Kaynakları</h2>
-        <p>Hayatınızda değiştirmek istediğiniz bir şey var mı? Deneme seansı talebinizi bize iletin.</p>
+        <p>Hayatınızda değiştirmek istediğiniz bir şey var mı? Koçluk seansı hakkında bize ulaşın.</p>
       </div>
       <div class="contact-box scroll-reveal slide-from-right">
         <a href={contactUrl} target="_blank" rel="noopener noreferrer">coach@perda.com.tr</a>

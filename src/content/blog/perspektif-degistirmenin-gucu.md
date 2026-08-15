@@ -27,4 +27,4 @@ Standart uygulamalar genellikle danışana hazır öneriler sunar. Perda’nın 
 
 Bu tekrar edilebilirlik önemlidir; çünkü bakış açısı değişimi tek seferlik bir aydınlanma olmak zorunda değildir. Danışan aynı yöntemi farklı konularda yeniden kullandıkça, kendi düşüncesine mesafe koyma becerisi gelişebilir.
 
-Perda'da ilk seans ücretsizdir. Perspektif değiştirme egzersizlerini deneyebilir, devam etmek isterseniz yeni seansları ihtiyaç duydukça satın alabilirsiniz.
+Perda'da koçluk seansı satın alarak perspektif değiştirme egzersizlerini kullanabilirsiniz. İlk seans sonrası memnun kalmazsanız 14 gün içinde tam iade hakkınız vardır.

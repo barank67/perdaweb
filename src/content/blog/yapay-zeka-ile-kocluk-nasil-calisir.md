@@ -33,4 +33,4 @@ Bu yapı, Perda’yı genel amaçlı sohbet araçlarından ayırır. Genel sohbe
 
 Danışan için değerli olan nokta, sürecin her an erişilebilir olmasıdır. Gece 23:00’te gelen bir mesaj kafayı karıştırdığında ya da sabaha karşı 04:00’te endişeyle uyanıldığında, beklemeden düşünceleri düzenlemek mümkün olabilir. Bu destek profesyonel yardımın veya insan ilişkilerinin yerine geçmez; fakat danışanın o anda kendi düşüncesini toparlamasına yardım eden pratik bir alan sunar.
 
-Perda Online Yaşam Koçu’nda ilk seans ücretsizdir. Kredi kartı bilgisi gerekmeden hesap oluşturabilir, devam etmek isterseniz seansları abonelik olmadan ihtiyaç duydukça satın alabilirsiniz.
+Perda Online Yaşam Koçu’nda koçluk seansı satın alarak başlayabilir, devam etmek isterseniz seansları abonelik olmadan ihtiyaç duydukça alabilirsiniz. İlk seans sonrası memnun kalmazsanız 14 gün içinde tam iade hakkınız vardır.

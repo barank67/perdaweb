@@ -10,99 +10,81 @@ const getPostSlug = (id: string) => id.replace(/\.md$/, "");
 
 const emailSubject = "Koçluk seansı hakkında";
 const emailBody =
-  "Merhaba Perda İnsan Kaynakları,\n\nYapay zeka ile koçluk uygulaması hakkında bilgi almak istiyorum.\n\nAd Soyad:\nTelefon:\nKoçluk odağım:\n";
+  "Merhaba Perda İnsan Kaynakları,\n\nKoçluk seansı hakkında bilgi almak istiyorum.\n\nAd Soyad:\nTelefon:\nKafama takılan konu:\n";
 const contactUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
 
-const steps = [
-  {
-    title: "Hedefinizi tarif edin",
-    text: "Değiştirmek, netleştirmek veya ilerletmek istediğiniz konuyu birkaç cümleyle başlatın.",
-  },
-  {
-    title: "Yapay zeka koçunuzla görüşün",
-    text: "Görüşme, hedefiniz etrafında sorular, yansıtma ve aksiyon seçenekleriyle yapılandırılır.",
-  },
-  {
-    title: "Aksiyon planı alın",
-    text: "Seans sonunda kararlarınızı, fark ettiklerinizi ve sonraki adımlarınızı daha net görürsünüz.",
-  },
-  {
-    title: "Bakış açınızı değiştirin",
-    text: "Seans sonrası diyalog uygulamasında, benzer konuda destek veren yol gösteren rolüne geçerek konuyu farklı taraftan görürsünüz.",
-  },
-  {
-    title: "Gerçek hikayelerden ilham alın",
-    text: "Benzer duygular yaşamış insanların bu süreci nasıl fırsata çevirdiğini anlatan gerçek hikayelerle seansı tamamlayabilirsiniz.",
-  },
+const painPoints = [
+  "Hayır diyemiyorum.",
+  "Zor konuşmaları erteliyorum.",
+  "Karar veremiyorum.",
+  "İşim bütün hayatımı kaplıyor.",
+  "Başarılı olmama rağmen yetersiz hissediyorum.",
+  "İlişkilerimde ihtiyaçlarımı söyleyemiyorum.",
+  "Yeni alışkanlıklara başlayıp sürdüremiyorum.",
+  "Hayatımda değişiklik istiyorum ama ilk adımı bulamıyorum.",
 ];
 
-const scopes = [
-  "Kariyer hedefleri",
-  "Liderlik ve karar alma",
-  "İlişki koçluğu",
-  "Motivasyon ve alışkanlıklar",
-  "İletişim becerileri",
-  "İş-yaşam dengesi",
-  "Bireysel gelişim",
-  "Kurumsal gelişim hedefleri",
+const topicGroups = [
+  "Sınır koyma ve hayır diyebilme",
+  "Erteleme ve harekete geçme",
+  "Kariyer yönü ve görünürlük",
+  "Karar verme ve belirsizlik",
+  "Özgüven ve yetersizlik hissi",
+  "İlişki koçluğu ve zor konuşmalar",
+  "İş-yaşam dengesi ve tükenmişlik",
+  "Alışkanlık değiştirme",
+  "Para, risk ve girişim kararları",
+  "Anlam arayışı ve yaşam yönü",
 ];
 
-const afterSessionFeatures = [
-  {
-    title: "Yol gösteren rolüne geçin",
-    text: "Koçluk seansı tamamlandıktan sonra danışan, benzer konuda destek veren kişi rolüne girer. Bu diyalog deneyimi, kişinin kendi konusuna dışarıdan bakmasını ve yeni seçenekleri fark etmesini kolaylaştırır.",
-  },
-  {
-    title: "Gerçek hikayelerle ilham alın",
-    text: "Seans sonunda benzer duygular yaşamış insanların gerçek hikayeleri paylaşılır. Danışan, zorlayıcı bir durumu fırsata çevirmiş kişilerin deneyimlerinden ilham alarak kendi adımını daha net düşünebilir.",
-  },
-];
-
-const coachingGains = [
-  "Farkındalık",
-  "Somut aksiyon ve egzersiz",
-  "Sorunu fırsata çevirmek için ilham",
-  "Odağı sorundan çözüme çeviren diyalog",
+const sessionGains = [
+  "Kafanızdaki konuyu tek odağa indirirsiniz.",
+  "Duygunuzun arkasındaki ihtiyacı fark edersiniz.",
+  "Kontrolünüzde olan küçük adımı görürsünüz.",
+  "Soruna sıkışmak yerine çözüm yönüne geçersiniz.",
+  "Konuya dışarıdan bakmayı denersiniz.",
+  "Benzer deneyimlerden ilham alırsınız.",
+  "Eski alışkanlığı yeni bir davranışla değiştirmek için uygulamamızdan destek alırsınız.",
 ];
 
 const faqs = [
   {
-    question: "Yapısı hazır tavsiye mi veriyor yoksa koçluk mu yapıyor?",
+    question: "Perda bana tavsiye mi verir?",
     answer:
-      "Aynı sorunu yaşayanların çözümü aynı değildir. Herkesin farklı geçmişi, bakış açıları, inançları ve beklentileri vardır. Yapay zeka koçunuz sizin çözümünüzü sizin bulmanız için size koçluk yapar. Tavsiye vermez, soru sorar.",
+      "Hayır. Aynı sorunu yaşayan herkesin çözümü aynı değildir. Perda size akıl vermek yerine, kendi cevabınızı bulmanız için doğru sorularla düşünme alanı açar.",
   },
   {
-    question: "Verilerim güvende mi / yazışmalarımı nasıl silebilirim?",
+    question: "Yapay zeka burada ne yapıyor?",
     answer:
-      "Seans bitiminde verileri silebileceğiniz bir buton görünür. Okumanız bittiğinde isterseniz silebilir, isterseniz saklayabilirsiniz. Siz sil demeden yazışmalarınız silinmez.",
+      "Yapay zeka, görüşmeyi yapılandırmak ve cevaplarınıza göre takip soruları üretmek için kullanılır. Ana amaç teknoloji göstermek değil, kafanızdaki konuyu daha anlaşılır hale getirmektir.",
   },
   {
     question: "İlk seans sonrası memnun kalmazsam ne olur?",
     answer:
-      "İlk koçluk seansınızı tamamladıktan sonra memnun kalmazsanız satın alma tarihinden itibaren 14 gün içinde ödemenin tamamını geri alabilirsiniz. Tekrar eden ödeme ve abonelik yoktur.",
+      "Koçluk uygulamasındaki ilk seansınızdan memnun kalmazsanız satın alma tarihinden itibaren 14 gün içinde ödemenin tamamını geri alabilirsiniz. Tekrar eden ödeme ve abonelik yoktur.",
   },
 ];
 ---
 
 <BaseLayout
-  title="Yapay Zeka ile Koçluk Uygulaması | Perda İnsan Kaynakları"
-  description="Perda İnsan Kaynakları, bireysel ve kurumsal hedefler için yapay zeka destekli koçluk seansları sunar. Memnun kalmazsanız ilk seans sonrası 14 gün içinde iade hakkınız vardır."
+  title="Perda | Koçluk Seansı"
+  description="Perda, kafanıza takılan konuyu netleştirmenize, duygunuzun arkasındaki ihtiyacı fark etmenize ve bir sonraki adımı görmenize yardımcı olan koçluk uygulamasıdır."
 >
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">Perda İnsan Kaynakları</p>
-      <h1>Yapay zeka ile kişisel koçluk deneyimi</h1>
+      <h1>Artık kafanıza takılan her konunun bir çözümü var</h1>
       <p class="lead">
-        Hayatınızda değiştirmek istediğiniz bir şey var mı? Perda, bireysel ve kurumsal hedefler için yapılandırılmış, erişilebilir ve insan odaklı bir yapay zeka koçluk uygulamasıdır.
+        Hayır diyememek, zor konuşmaları ertelemek, karar verememek, ilişkilerde sıkışmak, kariyer yönünü bulamamak veya eski alışkanlıklara geri dönmek... Perda, zihninizde dönen konuyu yapılandırmanıza ve bir sonraki adımı görmenize yardımcı olan koçluk uygulamasıdır.
       </p>
       <div class="hero-actions">
         <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Koçluk Seansı Al</a>
-        <a class="button-secondary" href="#nasil-calisir">Nasıl Çalışır?</a>
+        <a class="button-secondary" href="/kocluk-konulari">Koçluk konularını incele</a>
       </div>
     </div>
     <div class="hero-media">
-      <img src="/images/hero-ai-coaching.png" alt="Yapay zeka destekli koçluk görüşmesini temsil eden çalışma alanı" width="1536" height="1024" />
+      <img src="/images/hero-ai-coaching.png" alt="Koçluk seansı için sakin bir çalışma alanı" width="1536" height="1024" />
     </div>
   </section>
 
@@ -110,90 +92,94 @@ const faqs = [
     <div class="container message-inner">
       <h2>Hayatınızda değiştirmek istediğiniz bir şey var mı?</h2>
       <p>
-        Gece 11'de bir mesaj aldınız ve kafanız çok karıştı ya da sabaha karşı 4:00'da endişe içinde uyandınız. Koçunuza her an ulaşmak ister misiniz?
+        Bazen sorun büyük olduğu için değil, zihinde çok uzun süre yalnız taşındığı için ağırlaşır. Perda, o konuyu dışarı alıp daha sakin bir yerden görmenize yardım eder.
       </p>
-    </div>
-  </section>
-
-  <section id="nasil-calisir">
-    <div class="container split-heading">
-      <div>
-        <p class="eyebrow">Nasıl Çalışır?</p>
-        <h2>Koçluk görüşmesi yapay zeka tarafından yürütülür.</h2>
-      </div>
-      <p>
-        Süreç, hazır cevaplar vermek yerine doğru sorularla düşünmenizi, önceliklerinizi ayırmanızı ve uygulanabilir adımlar oluşturmanızı destekler.
-      </p>
-    </div>
-    <div class="container grid step-grid">
-      {steps.map((step, index) => (
-        <article class="card step-card">
-          <span>{String(index + 1).padStart(2, "0")}</span>
-          <h3>{step.title}</h3>
-          <p>{step.text}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="outcomes-section">
-    <div class="container split-heading">
-      <div>
-        <p class="eyebrow">Dakikalar İçinde</p>
-        <h2>Yapay zeka koçunuz 7-10 soruyla odağınızı netleştirir.</h2>
-      </div>
-      <p>
-        Perda, uzun hazırlık gerektirmeden sizi dinleyen, doğru sorularla düşünmenizi sağlayan ve seans sonunda uygulanabilir bir yön sunan kısa ama yapılandırılmış bir deneyim sunar.
-      </p>
-    </div>
-    <div class="container outcomes-list">
-      {coachingGains.map((gain) => <span>{gain}</span>)}
-    </div>
-  </section>
-
-  <section id="kapsam" class="soft-section">
-    <div class="container split-heading">
-      <div>
-        <p class="eyebrow">Koçluk Kapsamı</p>
-        <h2>Bireysel ve kurumsal hedeflere uyumlu esnek kullanım.</h2>
-      </div>
-      <p>
-        Perda, tek bir alana sıkışmadan kariyer, liderlik, ilişki koçluğu ve gündelik karar süreçleri gibi farklı gelişim başlıklarında kullanılabilir.
-      </p>
-    </div>
-    <div class="container scope-list">
-      {scopes.map((scope) => <span>{scope}</span>)}
     </div>
   </section>
 
   <section>
     <div class="container split-heading">
       <div>
-        <p class="eyebrow">Seans Sonrası Deneyim</p>
-        <h2>Görüşme bitince düşünme süreci devam eder.</h2>
+        <p class="eyebrow">Kendinizi Burada Buluyor Musunuz?</p>
+        <h2>Kafaya takılan konular çoğu zaman tanıdık cümlelerle başlar.</h2>
       </div>
       <p>
-        Perda, koçluk seansını yalnızca soru-cevap görüşmesi olarak bırakmaz. Danışanın bakış açısını genişletmesini ve yaşadığı durumu yeni bir anlamla ele almasını destekleyen iki tamamlayıcı uygulama sunar.
+        Bir koçluk seansı, tek bir cümleyle başlayan dağınık düşünceyi daha anlaşılır bir odağa çevirebilir.
       </p>
     </div>
-    <div class="container grid after-session-grid">
-      {afterSessionFeatures.map((feature) => (
-        <article class="card after-session-card">
-          <h3>{feature.title}</h3>
-          <p>{feature.text}</p>
-        </article>
-      ))}
+    <div class="container pain-grid">
+      {painPoints.map((point) => <article class="pain-card"><p>{point}</p></article>)}
+    </div>
+  </section>
+
+  <section id="kapsam" class="soft-section">
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Koçluk Konuları</p>
+        <h2>Koçluk hangi konularda yardımcı olabilir?</h2>
+      </div>
+      <p>
+        Sınır koymadan kariyer yönüne, ilişkilerden alışkanlıklara kadar kişisel olarak taşıdığınız birçok konuda seans başlatabilirsiniz.
+      </p>
+    </div>
+    <div class="container topic-grid">
+      {topicGroups.map((topic) => <span>{topic}</span>)}
+    </div>
+    <div class="container topic-action">
+      <a class="button-secondary" href="/kocluk-konulari">50 örnek konuyu gör</a>
+    </div>
+  </section>
+
+  <section id="nasil-calisir" class="outcomes-section">
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Seansta Ne Kazanırsınız?</p>
+        <h2>Önemli olan özellik değil, sizde bıraktığı değişimdir.</h2>
+      </div>
+      <p>
+        Yapay zeka arka planda görüşmeyi yapılandırır. Siz ise kafanızdaki konuyu, duygunuzu ve kontrolünüzdeki küçük adımı daha net görmeye başlarsınız.
+      </p>
+    </div>
+    <div class="container outcomes-list">
+      {sessionGains.map((gain) => <article><p>{gain}</p></article>)}
+    </div>
+  </section>
+
+  <section class="habit-section">
+    <div class="container habit-panel">
+      <div>
+        <p class="eyebrow">Alışkanlık Desteği</p>
+        <h2>Fark ettiğiniz şeyi günlük hayata taşıyın.</h2>
+      </div>
+      <div>
+        <blockquote>“Aynı şeyleri yaparak farklı sonuçlar bekleyemeyiz.”</blockquote>
+        <p>
+          Einstein’a atfedilen bu sözün hatırlattığı gibi, farkındalık davranışa dönüşmediğinde eski döngü devam eder. Koçluk seansında fark ettiğiniz şeyi günlük hayata taşımak için eski alışkanlığı yeni, küçük ve uygulanabilir bir davranışla değiştirmeye yardımcı olan uygulamamızdan destek alabilirsiniz.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Tavsiye Değil Koçluk</p>
+        <h2>Sizin için doğru olan cevabı sadece siz biliyorsunuz.</h2>
+      </div>
+      <p>
+        Aynı sorunu yaşayan herkesin çözümü aynı değildir. Perda size akıl vermek yerine, kendi cevabınızı bulmanız için doğru sorularla düşünme alanı açar.
+      </p>
     </div>
   </section>
 
   <section class="privacy-section">
     <div class="container privacy-note">
       <div>
-        <p class="eyebrow">Gizlilik Kontrolü</p>
-        <h2>Seans bitiminde yazışmalarınızı silebilirsiniz.</h2>
+        <p class="eyebrow">Güvenlik ve Kontrol</p>
+        <h2>Seans ve ödeme kontrolü sizde kalır.</h2>
       </div>
       <p>
-        Koçluk görüşmesi kişisel bir alandır. Perda'da danışan, seans tamamlandıktan sonra tüm seans yazışmalarını silebilir; böylece görüşme sonrası veri kontrolü kullanıcıda kalır.
+        Seans yazışmalarınızı silebilirsiniz. Abonelik yoktur; kredi kartı bilgisi saklamıyoruz. Koçluk uygulamasındaki ilk seansınızdan memnun kalmazsanız satın alma tarihinden itibaren 14 gün içinde ödemenizin tamamını geri alabilirsiniz.
       </p>
     </div>
   </section>
@@ -205,7 +191,7 @@ const faqs = [
         <h2>Sıkça sorulan sorular.</h2>
       </div>
       <p>
-        Koçluk yaklaşımı, veri kontrolü ve ilk seans sonrası iade hakkı hakkında en çok merak edilen konular.
+        Koçluk yaklaşımı, yapay zekanın rolü ve iade hakkı hakkında en çok merak edilen konular.
       </p>
     </div>
     <div class="container faq-list">
@@ -222,12 +208,12 @@ const faqs = [
     <div class="container trial">
       <div>
         <p class="eyebrow">Koçluk Seansı</p>
-        <h2>İlk seansı tamamlayın; memnun kalmazsanız ödemenizi geri alın.</h2>
+        <h2>Size uygun seans paketini seçin.</h2>
         <p>
-          Satın alma tarihinden itibaren 14 gün içinde iade hakkınız vardır. Abonelik yoktur; seans paketlerini ihtiyaç duydukça satın alırsınız.
+          Her pakette tüm özellikler aynıdır. İhtiyacınıza göre 4, 10 veya 75 seanslık koçluk paketlerinden birini seçebilirsiniz.
         </p>
       </div>
-      <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Hesap oluştur</a>
+      <a class="button" href="/fiyatlar">Fiyatları incele</a>
     </div>
   </section>
 
@@ -235,7 +221,7 @@ const faqs = [
     <div class="container split-heading">
       <div>
         <p class="eyebrow">Blog</p>
-        <h2>Yapay zeka, koçluk ve gelişim üzerine örnek içerikler.</h2>
+        <h2>Kafanıza takılan konular üzerine yazılar.</h2>
       </div>
       <a class="button-secondary" href="/blog">Tüm Yazılar</a>
     </div>
@@ -304,10 +290,6 @@ const faqs = [
     padding-bottom: clamp(42px, 6vw, 74px);
   }
 
-  .hero-copy {
-    width: min(100%, 900px);
-  }
-
   .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -329,119 +311,100 @@ const faqs = [
     object-fit: cover;
   }
 
-  .message-band {
-    padding-top: 42px;
-    padding-bottom: 42px;
+  .message-band,
+  .trial-section {
     color: white;
     background: var(--teal-dark);
   }
 
-  .message-inner {
+  .message-inner,
+  .split-heading,
+  .privacy-note,
+  .trial,
+  .contact,
+  .habit-panel {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr);
+    gap: 32px;
     align-items: center;
   }
 
+  .message-inner h2,
   .message-inner p,
-  .message-inner h2 {
+  .trial h2,
+  .trial p {
     color: white;
   }
 
   .split-heading {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-    gap: 32px;
     align-items: end;
     margin-bottom: 34px;
   }
 
-  .step-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .step-card {
-    min-height: 260px;
-    padding: 24px;
-  }
-
-  .step-card span {
-    display: inline-block;
-    margin-bottom: 46px;
-    color: var(--coral);
-    font-weight: 850;
-  }
-
-  .step-card h3 {
-    margin-bottom: 12px;
-  }
-
-  .soft-section {
+  .soft-section,
+  .privacy-section {
     background: var(--soft);
   }
 
-  .outcomes-section {
-    background: white;
-  }
-
+  .pain-grid,
+  .topic-grid,
   .outcomes-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 14px;
   }
 
-  .outcomes-list span {
+  .pain-card,
+  .outcomes-list article {
     display: grid;
-    min-height: 112px;
-    align-items: center;
+    min-height: 132px;
+    align-items: end;
     border: 1px solid var(--line);
     border-radius: 8px;
-    padding: 18px;
-    background: var(--soft);
+    padding: 20px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .pain-card p,
+  .outcomes-list p {
     color: var(--teal-dark);
-    font-size: 1.05rem;
+    font-weight: 850;
+  }
+
+  .topic-grid span {
+    border: 1px solid #cbd9d2;
+    border-radius: 8px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.78);
+    color: #293936;
     font-weight: 800;
   }
 
-  .scope-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+  .topic-action {
+    margin-top: 24px;
   }
 
-  .scope-list span {
-    border: 1px solid #cbd9d2;
-    border-radius: 999px;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.72);
-    color: #293936;
-    font-weight: 700;
+  .habit-section {
+    background: #122321;
   }
 
-  .after-session-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .habit-panel h2,
+  .habit-panel p,
+  .habit-panel blockquote {
+    color: white;
   }
 
-  .after-session-card {
-    min-height: 250px;
-    padding: clamp(24px, 4vw, 38px);
-    border-top: 6px solid var(--coral);
-  }
-
-  .after-session-card h3 {
-    margin-bottom: 14px;
-    font-size: clamp(1.35rem, 2.5vw, 2rem);
-  }
-
-  .privacy-section {
-    background: var(--soft);
+  .habit-panel blockquote {
+    margin: 0 0 16px;
+    border-left: 5px solid var(--coral);
+    padding-left: 18px;
+    font-size: clamp(1.35rem, 3vw, 2.2rem);
+    font-weight: 850;
+    line-height: 1.16;
   }
 
   .privacy-note {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 34px;
-    align-items: center;
     padding: clamp(30px, 5vw, 52px);
     border-left: 8px solid var(--teal);
     border-radius: 8px;
@@ -477,28 +440,9 @@ const faqs = [
     padding: 0 22px 22px;
   }
 
-  .trial-section {
-    background: #122321;
-  }
-
-  .trial {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 30px;
-    align-items: center;
-  }
-
-  .trial h2,
-  .trial p {
-    color: white;
-  }
-
   .trial .button {
+    justify-self: end;
     background: var(--coral);
-  }
-
-  .trial .button:hover {
-    background: #ad543c;
   }
 
   .blog-grid {
@@ -529,13 +473,6 @@ const faqs = [
 
   .contact-section {
     background: var(--soft);
-  }
-
-  .contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    align-items: center;
   }
 
   .contact-box {
@@ -574,7 +511,8 @@ const faqs = [
     .split-heading,
     .privacy-note,
     .trial,
-    .contact {
+    .contact,
+    .habit-panel {
       grid-template-columns: 1fr;
     }
 
@@ -582,8 +520,8 @@ const faqs = [
       min-height: auto;
     }
 
-    .step-grid,
-    .after-session-grid,
+    .pain-grid,
+    .topic-grid,
     .outcomes-list,
     .blog-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -595,8 +533,8 @@ const faqs = [
   }
 
   @media (max-width: 620px) {
-    .step-grid,
-    .after-session-grid,
+    .pain-grid,
+    .topic-grid,
     .outcomes-list,
     .blog-grid {
       grid-template-columns: 1fr;
@@ -605,14 +543,6 @@ const faqs = [
     .hero-media,
     .hero-media img {
       min-height: 300px;
-    }
-
-    .step-card {
-      min-height: auto;
-    }
-
-    .step-card span {
-      margin-bottom: 24px;
     }
   }
 

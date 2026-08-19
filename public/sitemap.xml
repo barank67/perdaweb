@@ -13,12 +13,24 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://perda.com.tr/teknik-ekip-koclugu/</loc>
+    <loc>https://perda.com.tr/kocluk-konulari/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://perda.com.tr/online-yasam-kocu/</loc>
-    <priority>0.8</priority>
+    <loc>https://perda.com.tr/blog/hayir-diyemiyorum-sinir-koymak/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://perda.com.tr/blog/zor-konusmalari-ertelemek/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://perda.com.tr/blog/karar-veremiyorum-belirsizlikte-adim/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://perda.com.tr/blog/basariliyim-ama-yetersiz-hissediyorum/</loc>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://perda.com.tr/blog/yapay-zeka-ile-kocluk-nasil-calisir/</loc>

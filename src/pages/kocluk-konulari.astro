@@ -1,0 +1,229 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const categories = [
+  {
+    title: "Sınır Koyma ve Kendini İfade Etme",
+    items: [
+      ["Hayır diyemiyorum.", "İnsanları kırmamak için kabul ettiğiniz taleplerin sizi yorduğunu fark ediyor ve sınırlarınızı suçluluk duymadan korumak istiyorsunuz."],
+      ["İnsanların benim hakkımda ne düşündüğünü fazla önemsiyorum.", "Kendi isteğinizden çok çevreden gelecek tepkileri hesaplıyor ve onaya ihtiyaç duymadan seçim yapabilmek istiyorsunuz."],
+      ["Toplantılarda fikirlerimi söyleyemiyorum.", "Yanlış bulunmaktan çekindiğiniz için geri planda kalıyor ve kendinizi daha net ortaya koymak istiyorsunuz."],
+      ["İnsanlardan yardım istemekte zorlanıyorum.", "Destek istemeyi güçsüzlük gibi değil, doğal bir iş birliği olarak görebilmek istiyorsunuz."],
+      ["Yardım tekliflerini geri çeviriyorum ama yalnız bırakıldığımda kırılıyorum.", "İhtiyaçlarınızı doğrudan ifade etmeyi ve beklentilerinizi daha açık kurmayı öğrenmek istiyorsunuz."],
+    ],
+  },
+  {
+    title: "Erteleme, Mükemmeliyetçilik ve Harekete Geçme",
+    items: [
+      ["Bir işe başlamak için kendimi hazır hissetmeyi bekliyorum.", "Yeterli bilgi, zaman veya güven oluşmadan da küçük bir adım atabilmek istiyorsunuz."],
+      ["Her şeyi kusursuz yapmaya çalışıyorum.", "Hata ihtimali yüzünden işleri uzatıyor veya yayımlamıyor, yeterince iyi olanı kabul etmek istiyorsunuz."],
+      ["Önemli işleri erteliyor, küçük işlerle oyalanıyorum.", "Meşgul olmak yerine gerçekten önemli hedeflerinizi ilerletecek bir düzen kurmak istiyorsunuz."],
+      ["Başladığım projeleri tamamlayamıyorum.", "İlk heyecan geçtikten sonra da devam edebilmek ve sonuç almak istiyorsunuz."],
+      ["Hayatımda bir değişiklik yapmak istediğimi biliyorum ama ilk adımı bulamıyorum.", "Büyük dönüşüm baskısı yerine kontrolünüzde olan küçük ve anlamlı ilk adımı belirlemek istiyorsunuz."],
+    ],
+  },
+  {
+    title: "Kariyer Yönü ve Görünürlük",
+    items: [
+      ["İş değiştirmek istiyorum ama hangi yöne gideceğimi bilmiyorum.", "Değerlerinize ve yeteneklerinize uygun bir kariyer yönü belirlemek istiyorsunuz."],
+      ["Terfi istemekten çekiniyorum.", "Katkınızı açıkça ifade edip unvan ve ücret konuşmalarını daha rahat yapabilmek istiyorsunuz."],
+      ["Kazancımı artırmak istiyorum ama kendimi göstermekten çekiniyorum.", "Değerinizi abartmadan görünür olmak ve teklif sunabilmek istiyorsunuz."],
+      ["Kendi işimi kurmakla güvenceli işimde kalmak arasında kararsızım.", "Özgürlük isteği ile güvenlik ihtiyacını gerçekçi biçimde değerlendirip geçiş planı oluşturmak istiyorsunuz."],
+      ["Bir fikrin doğru olup olmadığını anlamadan ona fazla bağlanıyorum.", "Fikrinizi egonuzdan ayırarak geliştirme, değiştirme veya bırakma kararını daha sakin vermek istiyorsunuz."],
+    ],
+  },
+  {
+    title: "Liderlik, Ekip ve Zor Geri Bildirim",
+    items: [
+      ["Eleştiri aldığımda hemen savunmaya geçiyorum.", "Geri bildirimi kişisel saldırı gibi algılamadan dinleyebilmek istiyorsunuz."],
+      ["İşleri devredemiyorum.", "Kontrolü tamamen kaybetmeden sorumluluk paylaşmayı ve tükenmeden ilerlemeyi öğrenmek istiyorsunuz."],
+      ["Yönetici olduğumdan beri eski çalışma arkadaşlarımla sınır koyamıyorum.", "Hem insani hem de kararlı bir yönetici olmak istiyorsunuz."],
+      ["Ekibimdeki çatışmaları üzerime alıyorum.", "Herkesin duygusal yükünü taşımadan liderlik edebilmek istiyorsunuz."],
+      ["İşletmemde her işi kendim yapıyorum.", "Hangi işleri bırakmanız gerektiğine karar verip büyümeye alan açmak istiyorsunuz."],
+    ],
+  },
+  {
+    title: "İş-Yaşam Dengesi ve Tükenmişlik",
+    items: [
+      ["İşim bütün hayatımı kaplıyor.", "İşinize önem verirken özel hayatınıza da gerçek bir alan açmak istiyorsunuz."],
+      ["Yoğun olmadığımda verimsiz hissediyorum.", "Meşgul olmakla değer üretmek arasındaki farkı daha sağlıklı kurmak istiyorsunuz."],
+      ["Kendime ayırdığım zamanı bencillik gibi görüyorum.", "Kendi ihtiyaçlarınızı da meşru görmeyi öğrenmek istiyorsunuz."],
+      ["Dinlenmeyi hak etmek için tükenmem gerektiğini düşünüyorum.", "Dinlenmeyi ödül değil, hayatınızın doğal bir parçası yapmak istiyorsunuz."],
+      ["Telefon ve sosyal medya zamanımı kontrol ediyor.", "Sıkıldığınızda ekrana yönelmek yerine dikkatinizi bilinçli biçimde yönetmek istiyorsunuz."],
+    ],
+  },
+  {
+    title: "Karar Verme, Risk ve Belirsizlik",
+    items: [
+      ["Karar verirken sürekli fikir değiştiriyorum.", "Her seçeneğin kaybettireceklerine takılmadan yeterince iyi kararlar verebilmek istiyorsunuz."],
+      ["Verdiğim kararları sonradan tekrar tekrar sorguluyorum.", "Seçiminizin sorumluluğunu alıp enerjinizi tüketmeden ilerlemek istiyorsunuz."],
+      ["Risk almaktan kaçındığım için yerimde sayıyorum.", "Başarısızlık ihtimalini büyütmeden hesaplanmış riskleri değerlendirmek istiyorsunuz."],
+      ["Başarısızlıktan sonra yeniden denemekte zorlanıyorum.", "Tek bir olumsuz sonucu kimliğinizin kanıtı gibi görmeden öğrenip devam etmek istiyorsunuz."],
+      ["Başarılı olursam hayatımın zorlaşacağından korkuyorum.", "Başarıyla ilgili görünürlük, sorumluluk ve beklenti korkularınızı anlamak istiyorsunuz."],
+    ],
+  },
+  {
+    title: "Özgüven, Kıyaslama ve Kendini Değerlendirme",
+    items: [
+      ["Başarılarımı küçümsüyorum.", "Emeğinizi ve güçlü yönlerinizi daha gerçekçi değerlendirmek istiyorsunuz."],
+      ["Başarılı olmama rağmen kendimi yetersiz hissediyorum.", "Yetkinliğinize daha sağlam bir güven geliştirmek istiyorsunuz."],
+      ["Kendimi başkalarıyla kıyaslamayı bırakamıyorum.", "Kendi ilerlemenizi kendi ölçütlerinizle değerlendirmek istiyorsunuz."],
+      ["Ne istediğimi değil, ne yapmam gerektiğini biliyorum.", "Çevrenin doğru kabul ettiği seçimlerin gerçekten size ait olup olmadığını netleştirmek istiyorsunuz."],
+      ["Hayatım dışarıdan iyi görünse de bir anlam eksikliği hissediyorum.", "Hayatınızın bir sonraki dönemine anlamlı bir yön vermek istiyorsunuz."],
+    ],
+  },
+  {
+    title: "İlişki Koçluğu ve Zor Konuşmalar",
+    items: [
+      ["Zor konuşmaları sürekli erteliyorum.", "Sorun büyümeden sakin, açık ve zamanında konuşabilmek istiyorsunuz."],
+      ["İlişkilerimde hep veren taraf olduğumu düşünüyorum.", "Verme biçiminizi ve karşılıklılık beklentinizi daha sağlıklı yönetmek istiyorsunuz."],
+      ["Partnerimin davranışlarını kişisel algılıyorum.", "Varsayım üretmek yerine durumu açıkça konuşabilmek istiyorsunuz."],
+      ["İlişkimde ihtiyaçlarımı söylemekten kaçınıyorum.", "Karşı tarafı suçlamadan ne istediğinizi ifade edebilmek istiyorsunuz."],
+      ["Tartışmalarda haklı çıkmaya odaklanıyorum.", "Haklılık yarışından çıkıp ilişkiyi koruyan ve çözüme götüren bir iletişim geliştirmek istiyorsunuz."],
+    ],
+  },
+  {
+    title: "Sosyal Bağlar, Aile ve Ebeveynlik",
+    items: [
+      ["Bir ilişki bittikten sonra ilerleyemiyorum.", "Geçmişten öğrenip hayatınızda yeni bir alan açmak istiyorsunuz."],
+      ["Yeni insanlarla tanışmak istiyorum ama ilk adımı atmıyorum.", "Sonucu kontrol etmeye çalışmadan bağlantı kurabilmek istiyorsunuz."],
+      ["Arkadaşlıklarımı sürdürmekte zorlanıyorum.", "İlişkilerinize düzenli ve içten biçimde emek vermek istiyorsunuz."],
+      ["Ailemin beklentileriyle kendi hayatım arasında sıkışıyorum.", "Bağınızı korurken bağımsız karar verebilmek istiyorsunuz."],
+      ["Çocuğumun her sorununu çözmeye çalışıyorum.", "Destek olmakla kontrol etmek arasındaki dengeyi bulmak istiyorsunuz."],
+    ],
+  },
+  {
+    title: "Alışkanlık, Para ve Yaşam Geçişleri",
+    items: [
+      ["Kendime çok fazla hedef koyuyorum.", "Aynı anda her şeyi değiştirmek yerine gerçekten önemli birkaç hedefi seçmek istiyorsunuz."],
+      ["Planlarım bozulduğunda tamamen vazgeçiyorum.", "Aksama yaşandığında bütün programı bırakmadan kaldığınız yerden devam etmek istiyorsunuz."],
+      ["Yeni alışkanlıklara hızlı başlayıp kısa sürede bırakıyorum.", "Küçük adımlarla ilerleyen ve aksamalara dayanabilen bir düzen kurmak istiyorsunuz."],
+      ["Ebeveyn olduktan sonra kendimi kaybetmiş hissediyorum.", "Ebeveynliğin yanında kendi kimliğinize de yeniden alan açmak istiyorsunuz."],
+      ["Para harcadığımda suçluluk duyuyorum.", "Para kararlarınızı korku ve suçluluk yerine önceliklerinize göre vermek istiyorsunuz."],
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Koçluk Alabileceğiniz Örnek Konular | Perda"
+  description="Perda'da koçluk seansı başlatabileceğiniz sınır koyma, karar verme, kariyer, ilişki, özgüven, alışkanlık ve yaşam dengesi konularını inceleyin."
+>
+  <section class="topics-hero">
+    <div class="container">
+      <p class="eyebrow">Koçluk Konuları</p>
+      <h1>Koçluk alabileceğiniz örnek konular</h1>
+      <p class="lead">
+        Sizin için doğru olan cevabı sadece siz biliyorsunuz. Biz, o cevabı bulmanıza yardım ediyoruz. Aşağıdaki başlıklar, Perda’da koçluk seansı başlatabileceğiniz örnek konuları gösterir.
+      </p>
+    </div>
+  </section>
+
+  <section class="topics-section">
+    <div class="container topics-list">
+      {categories.map((category) => (
+        <article class="topic-category">
+          <h2>{category.title}</h2>
+          <div class="topic-items">
+            {category.items.map(([title, text]) => (
+              <div class="topic-item">
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="topics-cta-section">
+    <div class="container topics-cta">
+      <div>
+        <p class="eyebrow">Koçluk Seansı</p>
+        <h2>Kafanıza takılan konuyla başlayın.</h2>
+      </div>
+      <p>
+        Konunuz bu listede birebir geçmese bile seans başlatabilirsiniz. Önemli olan, zihninizde dönen konuyu birlikte daha net bir odağa taşımaktır.
+      </p>
+      <a class="button" href="https://coach.perda.com.tr/accounts/signup/" target="_blank" rel="noopener noreferrer">Hesap oluştur</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .topics-hero {
+    background: var(--soft);
+  }
+
+  .topics-section {
+    background: var(--paper);
+  }
+
+  .topics-list {
+    display: grid;
+    gap: 26px;
+  }
+
+  .topic-category {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: clamp(22px, 4vw, 34px);
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .topic-category h2 {
+    margin-bottom: 22px;
+    font-size: clamp(1.65rem, 3vw, 2.45rem);
+  }
+
+  .topic-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .topic-item {
+    border-top: 4px solid var(--coral);
+    border-radius: 8px;
+    padding: 18px;
+    background: var(--soft);
+  }
+
+  .topic-item h3 {
+    margin-bottom: 8px;
+    color: var(--teal-dark);
+  }
+
+  .topics-cta-section {
+    background: #122321;
+  }
+
+  .topics-cta {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .topics-cta h2,
+  .topics-cta p {
+    color: white;
+  }
+
+  .topics-cta .button {
+    background: var(--coral);
+  }
+
+  @media (max-width: 900px) {
+    .topic-items,
+    .topics-cta {
+      grid-template-columns: 1fr;
+    }
+
+    .topics-cta .button {
+      justify-self: start;
+    }
+  }
+</style>

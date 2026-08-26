@@ -1,5 +1,6 @@
 ---
 title: "İlişki koçluğunda dijital destek ne sağlar?"
+seoTitle: "İlişki Koçluğunda Dijital Destek"
 description: "İlişki koçluğu, iletişim biçimini, beklentileri ve tekrar eden davranış kalıplarını daha sakin bir zeminde ele almayı destekler."
 pubDate: 2026-06-12
 image: "/images/blog-iliski-koclugu.png"

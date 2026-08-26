@@ -1,5 +1,6 @@
 ---
 title: "Karar veremiyorum: belirsizlik içinde küçük bir adım bulmak"
+seoTitle: "Karar Veremiyorum: Küçük Bir Adım Bulmak"
 description: "Karar verememek çoğu zaman bilgi eksikliğinden değil, kaybetme ihtimaline fazla odaklanmaktan kaynaklanır."
 pubDate: 2026-08-17
 image: "/images/blog-karar-veremiyorum.png"

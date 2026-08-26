@@ -1,5 +1,6 @@
 ---
 title: "Çok istediğimiz şeye bağımlı olursak neden zorlanırız?"
+seoTitle: "Çok İstemek ve Bağımlı Olmak"
 description: "Bir hedefi istemekle, o hedef olmazsa mutsuz olacağımıza inanmak arasındaki fark kişisel gelişim sürecini nasıl etkiler?"
 pubDate: 2026-08-11
 image: "/images/blog-istedigimize-bagimli-olmak-v2.png"

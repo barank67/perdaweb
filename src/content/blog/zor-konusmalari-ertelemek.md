@@ -1,5 +1,6 @@
 ---
 title: "Zor konuşmaları ertelemek neden sorunu büyütür?"
+seoTitle: "Zor Konuşmaları Ertelemek"
 description: "Rahatsız olduğumuz konuları konuşmadığımızda sorun kaybolmaz; çoğu zaman içimizde büyür ve daha sert biçimde ortaya çıkar."
 pubDate: 2026-08-18
 image: "/images/blog-zor-konusmalari-ertelemek.png"

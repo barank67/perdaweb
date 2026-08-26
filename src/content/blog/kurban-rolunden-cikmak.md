@@ -1,5 +1,6 @@
 ---
 title: "Kurban olmak iyi hissettirebilir ama bizi olduğumuz yerde tutar"
+seoTitle: "Kurban Rolünden Çıkmak"
 description: "Odağı başkalarının yaptıklarından kendi kontrol alanımıza çevirmek, danışanın çözüm üretme gücünü nasıl artırabilir?"
 pubDate: 2026-08-10
 image: "/images/blog-kurban-rolunden-cikmak-v2.png"

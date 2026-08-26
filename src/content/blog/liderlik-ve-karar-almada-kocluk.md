@@ -1,5 +1,6 @@
 ---
 title: "Liderlik ve karar almada koçluk yaklaşımı"
+seoTitle: "Liderlik ve Karar Almada Koçluk"
 description: "Liderlik koçluğu, kararları hızlandırmaktan çok karar kalitesini artırmaya ve kişinin etkisini daha bilinçli yönetmesine odaklanır."
 pubDate: 2026-06-08
 image: "/images/blog-liderlik-karar.png"

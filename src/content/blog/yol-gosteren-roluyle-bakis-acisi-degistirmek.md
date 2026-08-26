@@ -1,5 +1,6 @@
 ---
 title: "Yol gösteren rolüne geçmek bakış açısını nasıl değiştirir?"
+seoTitle: "Yol Gösteren Rolüyle Bakış Açısı Değiştirmek"
 description: "Koçluk seansı sonrası danışanın benzer konuda destek veren rolüne girmesi, kendi konusuna daha geniş ve sakin bir yerden bakmasını sağlar."
 pubDate: 2026-07-22
 image: "/images/blog-yol-gosteren-bakis-v2.png"

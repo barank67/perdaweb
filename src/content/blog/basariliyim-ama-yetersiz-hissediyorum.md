@@ -1,5 +1,6 @@
 ---
 title: "Başarılı olmama rağmen neden yetersiz hissediyorum?"
+seoTitle: "Başarılıyım ama Yetersiz Hissediyorum"
 description: "Başarıları şansa bağlamak, hataları kimliğin kanıtı gibi görmek ve görünür olmaktan çekinmek yetersizlik hissini büyütebilir."
 pubDate: 2026-08-16
 image: "/images/blog-yetersiz-hissediyorum.png"

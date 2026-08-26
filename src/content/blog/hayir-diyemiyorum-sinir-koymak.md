@@ -1,5 +1,6 @@
 ---
 title: "Hayır diyemiyorum: suçluluk duymadan sınır koymak"
+seoTitle: "Hayır Diyemiyorum: Sınır Koymak"
 description: "İnsanları kırmamak için sürekli evet demek, zamanla yorgunluk ve kırgınlık biriktirebilir. Sınır koymak neden bencillik değildir?"
 pubDate: 2026-08-19
 image: "/images/blog-hayir-diyemiyorum.png"

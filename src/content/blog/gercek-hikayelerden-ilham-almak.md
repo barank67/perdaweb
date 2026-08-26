@@ -1,5 +1,6 @@
 ---
 title: "Gerçek hikayeler zor bir durumu fırsata çevirmeye nasıl yardım eder?"
+seoTitle: "Gerçek Hikayelerden İlham Almak"
 description: "Seans sonunda paylaşılan gerçek hikayeler, danışanın yalnız olmadığını görmesine ve benzer deneyimlerden ilham almasına yardımcı olur."
 pubDate: 2026-07-21
 image: "/images/blog-gercek-hikayeler-ilham-v2.png"

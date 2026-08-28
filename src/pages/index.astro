@@ -48,6 +48,12 @@ const sessionGains = [
   "Eski alışkanlığı yeni bir davranışla değiştirmek için uygulamamızdan destek alırsınız.",
 ];
 
+const userStories = [
+  "42 yaşındayım ve işimi gerçekten seviyorum. Ama yöneticimle sürekli yaşadığım gerilim yüzünden her sabah işe giderken ayaklarım geri gidiyordu. Eşimin doğum günümde hediye ettiği Perda Koçluk Uygulaması 10 seansı sonrasında korkumu yönetmeyi başardım ve yöneticimle açık iletişim kurabildim. Artık kendimi çok daha güvende hissediyorum. İşimden daha fazla keyif alıyorum.",
+  "48 yaşındayım ve 21 yıllık evliliğim boyunca ‘terk edilirim’ korkusuyla beni mutsuz eden her şeyi görmezden geldim. Kendimi köşeye sıkışmış ve çaresiz hissediyordum. Perda Koçluk Uygulamasından çok faydalandım. 12 seans sonunda terk edilme korkum azaldı. Hâlâ aynı evdeyim, aynı insanla yaşıyorum ama artık kendimi çok daha güçlü hissediyorum. Kendimi öncelik yapabilmeyi, sınır koyabilmeyi başardım. Sorun eşimde sanıyordum ama çözüm bendeymiş.",
+  "35 yaşındayım, iki çocuklu bir anneyim. Hayatı bana öğretilen kurallara uygun yaşamaya çalışıyordum ama hiçbir şeyden keyif alamaz hale gelmiştim. Bir arkadaşımın önerisiyle Perda Koçluk Uygulamasından seans aldım. Artık kendimi çok daha hafif ve özgür hissediyorum. Aynı hayatı yaşıyor olsam da ufak değişimler büyük fark yarattı. Bunu hissetmek çok değerli.",
+];
+
 const faqs = [
   {
     question: "Perda bana tavsiye mi verir?",
@@ -181,6 +187,25 @@ const faqs = [
       <p>
         Seans yazışmalarınızı silebilirsiniz. Abonelik yoktur; kredi kartı bilgisi saklamıyoruz. Koçluk uygulamasındaki ilk seansınızdan memnun kalmazsanız satın alma tarihinden itibaren 14 gün içinde ödemenizin tamamını geri alabilirsiniz.
       </p>
+    </div>
+  </section>
+
+  <section class="stories-section">
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Deneyimler</p>
+        <h2>Kullanıcılarımızın Hikayeleri</h2>
+      </div>
+      <p>
+        Perda Koçluk Uygulaması ile kendi konusuna daha sakin bakabilen kullanıcıların deneyimleri.
+      </p>
+    </div>
+    <div class="container stories-grid">
+      {userStories.map((story) => (
+        <article class="story-card">
+          <blockquote>{story}</blockquote>
+        </article>
+      ))}
     </div>
   </section>
 
@@ -416,6 +441,29 @@ const faqs = [
     background: white;
   }
 
+  .stories-section {
+    background: white;
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .story-card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+    background: var(--paper);
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.05);
+  }
+
+  .story-card blockquote {
+    color: #293936;
+    font-size: 1rem;
+  }
+
   .faq-list {
     display: grid;
     gap: 12px;
@@ -523,6 +571,7 @@ const faqs = [
     .pain-grid,
     .topic-grid,
     .outcomes-list,
+    .stories-grid,
     .blog-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -536,6 +585,7 @@ const faqs = [
     .pain-grid,
     .topic-grid,
     .outcomes-list,
+    .stories-grid,
     .blog-grid {
       grid-template-columns: 1fr;
     }

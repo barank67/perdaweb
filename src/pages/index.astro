@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "Perda bana tavsiye mi verir?",
     answer:
-      "Hayır. Aynı sorunu yaşayan herkesin çözümü aynı değildir. Perda size akıl vermek yerine, kendi cevabınızı bulmanız için doğru sorularla düşünme alanı açar.",
+      "Hayır. Perda hazır tavsiye vermek yerine, düşünmenizi kolaylaştıran sorularla kendi cevabınızı netleştirmenize yardımcı olur.",
   },
   {
     question: "Yapay zeka burada ne yapıyor?",
@@ -95,23 +95,15 @@ const faqs = [
   </section>
 
   <section class="message-band">
-    <div class="container message-inner">
+    <div class="container message-inner message-heading">
       <h2>Hayatınızda değiştirmek istediğiniz bir şey var mı?</h2>
-      <p>
-        Bazen sorun büyük olduğu için değil, zihinde çok uzun süre yalnız taşındığı için ağırlaşır. Perda, o konuyu dışarı alıp daha sakin bir yerden görmenize yardım eder.
-      </p>
     </div>
   </section>
 
   <section>
-    <div class="container split-heading">
-      <div>
-        <p class="eyebrow">Kendinizi Burada Buluyor Musunuz?</p>
-        <h2>Kafaya takılan konular çoğu zaman tanıdık cümlelerle başlar.</h2>
-      </div>
-      <p>
-        Bir koçluk seansı, tek bir cümleyle başlayan dağınık düşünceyi daha anlaşılır bir odağa çevirebilir.
-      </p>
+    <div class="container wide-heading">
+      <p class="eyebrow">Kendinizi Burada Buluyor Musunuz?</p>
+      <h2>Kafaya takılan konular çoğu zaman tanıdık cümlelerle başlar.</h2>
     </div>
     <div class="container pain-grid">
       {painPoints.map((point) => <article class="pain-card"><p>{point}</p></article>)}
@@ -119,14 +111,9 @@ const faqs = [
   </section>
 
   <section id="kapsam" class="soft-section">
-    <div class="container split-heading">
-      <div>
-        <p class="eyebrow">Koçluk Konuları</p>
-        <h2>Koçluk hangi konularda yardımcı olabilir?</h2>
-      </div>
-      <p>
-        Sınır koymadan kariyer yönüne, ilişkilerden alışkanlıklara kadar kişisel olarak taşıdığınız birçok konuda seans başlatabilirsiniz.
-      </p>
+    <div class="container wide-heading">
+      <p class="eyebrow">Koçluk Konuları</p>
+      <h2>Koçluk hangi konularda yardımcı olabilir?</h2>
     </div>
     <div class="container topic-grid">
       {topicGroups.map((topic) => <span>{topic}</span>)}
@@ -137,14 +124,9 @@ const faqs = [
   </section>
 
   <section id="nasil-calisir" class="outcomes-section">
-    <div class="container split-heading">
-      <div>
-        <p class="eyebrow">Seansta Ne Kazanırsınız?</p>
-        <h2>Önemli olan özellik değil, sizde bıraktığı değişimdir.</h2>
-      </div>
-      <p>
-        Yapay zeka arka planda görüşmeyi yapılandırır. Siz ise kafanızdaki konuyu, duygunuzu ve kontrolünüzdeki küçük adımı daha net görmeye başlarsınız.
-      </p>
+    <div class="container wide-heading">
+      <p class="eyebrow">Seansta Ne Kazanırsınız?</p>
+      <h2>Önemli olan özellik değil, sizde bıraktığı değişimdir.</h2>
     </div>
     <div class="container outcomes-list">
       {sessionGains.map((gain) => <article><p>{gain}</p></article>)}
@@ -167,14 +149,9 @@ const faqs = [
   </section>
 
   <section>
-    <div class="container split-heading">
-      <div>
-        <p class="eyebrow">Tavsiye Değil Koçluk</p>
-        <h2>Sizin için doğru olan cevabı sadece siz biliyorsunuz.</h2>
-      </div>
-      <p>
-        Aynı sorunu yaşayan herkesin çözümü aynı değildir. Perda size akıl vermek yerine, kendi cevabınızı bulmanız için doğru sorularla düşünme alanı açar.
-      </p>
+    <div class="container wide-heading">
+      <p class="eyebrow">Tavsiye Değil Koçluk</p>
+      <h2>Sizin için doğru olan cevabı sadece siz biliyorsunuz.</h2>
     </div>
   </section>
 
@@ -205,14 +182,9 @@ const faqs = [
   </section>
 
   <section class="faq-section">
-    <div class="container split-heading">
-      <div>
-        <p class="eyebrow">SSS</p>
-        <h2>Sıkça sorulan sorular.</h2>
-      </div>
-      <p>
-        Koçluk yaklaşımı, yapay zekanın rolü ve iade hakkı hakkında en çok merak edilen konular.
-      </p>
+    <div class="container wide-heading">
+      <p class="eyebrow">SSS</p>
+      <h2>Sıkça sorulan sorular.</h2>
     </div>
     <div class="container faq-list">
       {faqs.map((faq) => (
@@ -356,9 +328,19 @@ const faqs = [
     color: white;
   }
 
-  .split-heading {
+  .split-heading,
+  .wide-heading {
     align-items: end;
     margin-bottom: 34px;
+  }
+
+  .wide-heading h2,
+  .message-heading h2 {
+    max-width: 1000px;
+  }
+
+  .message-heading {
+    grid-template-columns: 1fr;
   }
 
   .soft-section,

@@ -191,14 +191,9 @@ const faqs = [
   </section>
 
   <section class="stories-section">
-    <div class="container split-heading">
-      <div>
-        <p class="eyebrow">Deneyimler</p>
-        <h2>Kullanıcılarımızın Hikayeleri</h2>
-      </div>
-      <p>
-        Perda Koçluk Uygulaması ile kendi konusuna daha sakin bakabilen kullanıcıların deneyimleri.
-      </p>
+    <div class="container stories-heading">
+      <p class="eyebrow">Deneyimler</p>
+      <h2>Kullanıcılarımızın Hikayeleri</h2>
     </div>
     <div class="container stories-grid">
       {userStories.map((story) => (
@@ -443,6 +438,14 @@ const faqs = [
 
   .stories-section {
     background: white;
+  }
+
+  .stories-heading {
+    margin-bottom: 34px;
+  }
+
+  .stories-heading h2 {
+    max-width: 1000px;
   }
 
   .stories-grid {

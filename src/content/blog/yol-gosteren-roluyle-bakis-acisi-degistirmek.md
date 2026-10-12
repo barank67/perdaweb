@@ -6,6 +6,7 @@ pubDate: 2026-07-22
 image: "/images/blog-yol-gosteren-bakis-v2.png"
 category: "Koçluk Deneyimi"
 readTime: "6 dk"
+draft: true
 ---
 
 "Başkalarına öğrettiğimiz şeyleri, çoğu zaman önce kendimiz öğreniriz." — Seneca

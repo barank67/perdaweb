@@ -11,6 +11,7 @@ const blog = defineCollection({
     image: z.string(),
     category: z.string(),
     readTime: z.string(),
+    draft: z.boolean().optional(),
   }),
 });
 

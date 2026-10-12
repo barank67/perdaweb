@@ -28,7 +28,7 @@ Bu yapı, liderin hem kendi davranışını hem de kararlarının çevresindeki 
 
 Koçluk sonunda büyük bir strateji dokümanı değil, uygulanabilir bir sonraki adım gerekir. Bu adım bir görüşme planı, bir öncelik listesi, bir ekip toplantısında sorulacak soru veya test edilecek yeni bir davranış olabilir. Küçük aksiyonun değeri, kararın gerçek hayata temas etmesini sağlamasıdır.
 
-Perda’nın standart uygulamalardan ayrılan tarafı, seans sonrasında da düşünme sürecini desteklemesidir. Danışan benzer bir konuda destek veren yol gösteren rolüne geçerek kendi kararına dışarıdan bakabilir. Ayrıca benzer duygular yaşamış insanların gerçek hikayeleri, liderlik baskısını yalnızca kişisel yetersizlik gibi görmek yerine gelişim fırsatı olarak değerlendirmeye yardım edebilir.
+Perda’nın standart uygulamalardan ayrılan tarafı, seansı yapılandırılmış sorularla odakta tutması ve fark edilen küçük adımı günlük hayata taşımak için Keok alışkanlık desteği sunmasıdır. Liderlik baskısı böylece yalnızca kişisel yetersizlik gibi değil, üzerinde çalışılabilir bir gelişim alanı olarak ele alınabilir.
 
 Bu özellikle teknik ekiplerde değerlidir. Analitik zekaya sahip çalışanlar bazen duygusal veya ilişkisel konuları ölçülemeyen, bu nedenle yönetilmesi zor alanlar gibi görebilir. Oysa liderlikte iletişim, beklenti yönetimi ve karar açıklığı da en az teknik doğruluk kadar önemlidir. Koçluk uygulaması bu alanları soyut motivasyon cümleleriyle değil, sorular ve somut aksiyonlarla ele alır. Danışan böylece hem kendi kararını hem de kararın ekip üzerindeki etkisini daha net değerlendirebilir.
 

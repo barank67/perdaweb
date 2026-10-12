@@ -5,6 +5,7 @@ pubDate: 2026-08-08
 image: "/images/blog-hikayelerden-ilham-almak-v2.png"
 category: "İlham Hikayeleri"
 readTime: "6 dk"
+draft: true
 ---
 
 "Beslenme, barınma ve arkadaşlıktan sonra, dünyada en çok ihtiyaç duyduğumuz şey hikayelerdir." — Philip Pullman

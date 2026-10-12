@@ -30,7 +30,7 @@ Standart uygulamalar çoğu zaman genel iletişim önerileri verir: daha sakin k
 
 İlişki koçluğu, zor bir konuşmaya hazırlanırken, iletişim tarzınızı gözden geçirmek istediğinizde veya bireysel farkındalığınızı artırmak istediğinizde destekleyici olabilir. Gece geç saatte gelen bir mesaj kafanızı karıştırdığında ya da sabaha karşı endişeyle uyandığınızda, konuyu hemen birine anlatma ihtiyacı duyabilirsiniz. Perda’nın 7/24 erişilebilir yapısı, o anda düşüncelerinizi düzenlemenize yardım edebilir.
 
-Seans sonrasında danışan, benzer konuda destek veren yol gösteren rolüne geçerek kendi durumuna farklı bir açıdan bakabilir. Ayrıca benzer duygular yaşamış insanların gerçek hikayeleri, yalnızlık hissini azaltmaya ve durumu bir gelişim fırsatı olarak değerlendirmeye yardım edebilir. Yazışmalarınızı seans sonunda silebilmeniz de gizlilik kontrolünü sizin elinizde tutar.
+Seans sonunda yazışmalarınızı silebilmeniz gizlilik kontrolünü sizin elinizde tutar. Fark ettiğiniz küçük adımı günlük hayata taşımak için Keok alışkanlık desteğini kullanabilirsiniz.
 
 İlişki koçluğunda amaç karşı tarafı değiştirmek değildir. Danışanın kendi iletişim biçimini, beklentisini, sınırını ve tekrar eden tepkisini daha net görmesine yardım etmektir. Bu netlik bazen bir konuşmayı başlatmayı, bazen konuşmayı ertelemeyi, bazen de aynı cümleyi daha sakin kurmayı sağlar. Küçük görünen bu farklar ilişkideki döngüyü değiştirmeye yardım edebilir.
 

@@ -5,6 +5,7 @@ pubDate: 2026-08-07
 image: "/images/blog-perspektif-degistirmek-v2.png"
 category: "Perspektif"
 readTime: "6 dk"
+draft: true
 ---
 
 "Gerçek keşif yolculuğu yeni manzaralar aramakta değil, yeni gözlere sahip olmakta yatar." — Marcel Proust

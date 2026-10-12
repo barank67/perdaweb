@@ -2,9 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const getPostSlug = (id: string) => id.replace(/\.md$/, "");
 
@@ -43,8 +43,6 @@ const sessionGains = [
   "Duygunuzun arkasındaki ihtiyacı fark edersiniz.",
   "Kontrolünüzde olan küçük adımı görürsünüz.",
   "Soruna sıkışmak yerine çözüm yönüne geçersiniz.",
-  "Konuya dışarıdan bakmayı denersiniz.",
-  "Benzer deneyimlerden ilham alırsınız.",
   "Eski alışkanlığı yeni bir davranışla değiştirmek için uygulamamızdan destek alırsınız.",
 ];
 

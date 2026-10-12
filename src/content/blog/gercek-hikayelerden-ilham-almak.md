@@ -6,6 +6,7 @@ pubDate: 2026-07-21
 image: "/images/blog-gercek-hikayeler-ilham-v2.png"
 category: "İlham Hikayeleri"
 readTime: "6 dk"
+draft: true
 ---
 
 "Zorluklar bizi kırmaz; bizi kıran, onlara verdiğimiz anlamdır. Aynı zorluk birini yıkarken diğerini güçlendirebilir." — Epiktetos

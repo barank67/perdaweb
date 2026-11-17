@@ -1,0 +1,527 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import home from "../../i18n/en-home.json";
+const { painPoints, topicGroups, sessionGains, userStories, faqs } = home;
+const posts = (await getCollection("blogEn")).filter(p => !p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+const getPostSlug = (id: string) => id.replace(/\.md$/, "");
+const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
+const contactUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=${encodeURIComponent("About coaching sessions")}&body=${encodeURIComponent("Hello Perda Human Resources,\n\nI would like information about coaching sessions.\n\nFull name:\nPhone:\nWhat is on my mind:\n")}`;
+---
+
+<BaseLayout
+  title="Perda | Coaching Sessions"
+  description="Perda is a coaching app that helps you clarify what is on your mind, recognise the need behind your feelings and see your next step."
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Perda Human Resources</p>
+      <h1>Find a way forward with whatever is on your mind</h1>
+      <p class="lead">
+        Struggling to say no, putting off difficult conversations, feeling unable to decide, getting stuck in relationships, finding your career direction or slipping back into old habits... Perda helps you organise what is on your mind and see your next step.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Start a Coaching Session</a>
+        <a class="button-secondary" href="/en/coaching-topics/">Explore coaching topics</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="/images/hero-ai-coaching.png" alt="A calm workspace for a coaching session" width="1536" height="1024" />
+    </div>
+  </section>
+
+  <section class="message-band">
+    <div class="container message-inner message-heading">
+      <h2>Is there something you would like to change in your life?</h2>
+    </div>
+  </section>
+
+  <section>
+    <div class="container wide-heading">
+      <p class="eyebrow">Does This Sound Familiar?</p>
+      <h2>The things on our minds often start with familiar words.</h2>
+    </div>
+    <div class="container pain-grid">
+      {painPoints.map((point) => <article class="pain-card"><p>{point}</p></article>)}
+    </div>
+  </section>
+
+  <section id="kapsam" class="soft-section">
+    <div class="container wide-heading">
+      <p class="eyebrow">Coaching Topics</p>
+      <h2>What can coaching help with?</h2>
+    </div>
+    <div class="container topic-grid">
+      {topicGroups.map((topic) => <span>{topic}</span>)}
+    </div>
+    <div class="container topic-action">
+      <a class="button-secondary" href="/en/coaching-topics/">See 50 example topics</a>
+    </div>
+  </section>
+
+  <section id="nasil-calisir" class="outcomes-section">
+    <div class="container wide-heading">
+      <p class="eyebrow">What You Can Gain</p>
+      <h2>What matters is the difference it makes in your life.</h2>
+    </div>
+    <div class="container outcomes-list">
+      {sessionGains.map((gain) => <article><p>{gain}</p></article>)}
+    </div>
+  </section>
+
+  <section class="habit-section">
+    <div class="container habit-panel">
+      <div>
+        <p class="eyebrow">Habit Support</p>
+        <h2>Bring your insights into everyday life.</h2>
+      </div>
+      <div>
+        <blockquote>“We cannot expect different results by doing the same things.”</blockquote>
+        <p>
+          As this saying, often attributed to Einstein, reminds us, old patterns continue when awareness does not turn into action. Our app helps you bring insights from your coaching session into daily life by replacing an old habit with a small, practical new behaviour.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container wide-heading">
+      <p class="eyebrow">Coaching Beyond Advice</p>
+      <h2>Only you know the answer that is right for you.</h2>
+    </div>
+  </section>
+
+  <section class="privacy-section">
+    <div class="container privacy-note">
+      <div>
+        <p class="eyebrow">Security and Control</p>
+        <h2>Stay in control of your sessions and payments.</h2>
+      </div>
+      <p>
+        You can delete your session conversations. There is no subscription, and we do not store credit card details. If you are not satisfied with your first coaching session, you can receive a full refund within 14 days of purchase.
+      </p>
+    </div>
+  </section>
+
+  <section class="stories-section">
+    <div class="container stories-heading">
+      <p class="eyebrow">Experiences</p>
+      <h2>Stories from Our Users</h2>
+    </div>
+    <div class="container stories-grid">
+      {userStories.map((story) => (
+        <article class="story-card">
+          <blockquote>{story}</blockquote>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container wide-heading">
+      <p class="eyebrow">FAQ</p>
+      <h2>Frequently asked questions.</h2>
+    </div>
+    <div class="container faq-list">
+      {faqs.map((faq) => (
+        <details class="faq-item">
+          <summary>{faq.question}</summary>
+          <p>{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section id="seans" class="trial-section">
+    <div class="container trial">
+      <div>
+        <p class="eyebrow">Coaching Session</p>
+        <h2>Choose the session package that suits you.</h2>
+        <p>
+          Every package includes the same features. Choose 4, 10 or 75 coaching sessions to suit your needs.
+        </p>
+      </div>
+      <a class="button" href="/en/pricing/">View pricing</a>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Blog</p>
+        <h2>Articles about the things on your mind.</h2>
+      </div>
+      <a class="button-secondary" href="/en/blog/">All Articles</a>
+    </div>
+    <div class="container grid blog-grid">
+      {posts.slice(0, 3).map((post) => (
+        <article class="card blog-card">
+          <a href={`/en/blog/${getPostSlug(post.id)}/`}>
+            <img src={post.data.image} alt="" width="900" height="506" loading="lazy" />
+            <div>
+              <span>{post.data.category} · {post.data.readTime}</span>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="iletisim" class="contact-section">
+    <div class="container contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Perda Human Resources</h2>
+        <p>Is there something you would like to change in your life? Contact us about coaching sessions.</p>
+      </div>
+      <div class="contact-box scroll-reveal slide-from-right">
+        <a href={contactUrl} target="_blank" rel="noopener noreferrer">coach@perda.com.tr</a>
+        <span>Akasya Tower, Acıbadem, Üsküdar / Istanbul</span>
+        <span>perda.com.tr</span>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const revealItems = document.querySelectorAll(".scroll-reveal");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.28 },
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  }
+</script>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.03fr) minmax(320px, 0.97fr);
+    min-height: calc(100vh - 82px);
+    align-items: center;
+    gap: clamp(28px, 5vw, 72px);
+    padding-top: clamp(42px, 6vw, 74px);
+    padding-bottom: clamp(42px, 6vw, 74px);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .hero-media {
+    min-height: 420px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .hero-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+  }
+
+  .message-band,
+  .trial-section {
+    color: white;
+    background: var(--teal-dark);
+  }
+
+  .message-inner,
+  .split-heading,
+  .privacy-note,
+  .trial,
+  .contact,
+  .habit-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr);
+    gap: 32px;
+    align-items: center;
+  }
+
+  .message-inner h2,
+  .message-inner p,
+  .trial h2,
+  .trial p {
+    color: white;
+  }
+
+  .split-heading,
+  .wide-heading {
+    align-items: end;
+    margin-bottom: 34px;
+  }
+
+  .wide-heading h2,
+  .message-heading h2 {
+    max-width: 1000px;
+  }
+
+  .message-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .soft-section,
+  .privacy-section {
+    background: var(--soft);
+  }
+
+  .pain-grid,
+  .topic-grid,
+  .outcomes-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .pain-card,
+  .outcomes-list article {
+    display: grid;
+    min-height: 132px;
+    align-items: end;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .pain-card p,
+  .outcomes-list p {
+    color: var(--teal-dark);
+    font-weight: 850;
+  }
+
+  .topic-grid span {
+    border: 1px solid #cbd9d2;
+    border-radius: 8px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.78);
+    color: #293936;
+    font-weight: 800;
+  }
+
+  .topic-action {
+    margin-top: 24px;
+  }
+
+  .habit-section {
+    background: #122321;
+  }
+
+  .habit-panel h2,
+  .habit-panel p,
+  .habit-panel blockquote {
+    color: white;
+  }
+
+  .habit-panel blockquote {
+    margin: 0 0 16px;
+    border-left: 5px solid var(--coral);
+    padding-left: 18px;
+    font-size: clamp(1.35rem, 3vw, 2.2rem);
+    font-weight: 850;
+    line-height: 1.16;
+  }
+
+  .privacy-note {
+    padding: clamp(30px, 5vw, 52px);
+    border-left: 8px solid var(--teal);
+    border-radius: 8px;
+    background: white;
+    box-shadow: var(--shadow);
+  }
+
+  .faq-section {
+    background: white;
+  }
+
+  .stories-section {
+    background: white;
+  }
+
+  .stories-heading {
+    margin-bottom: 34px;
+  }
+
+  .stories-heading h2 {
+    max-width: 1000px;
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .story-card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+    background: var(--paper);
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.05);
+  }
+
+  .story-card blockquote {
+    color: #293936;
+    font-size: 1rem;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .faq-item {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.04);
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    padding: 20px 22px;
+    color: var(--ink);
+    font-size: 1.05rem;
+    font-weight: 850;
+  }
+
+  .faq-item p {
+    padding: 0 22px 22px;
+  }
+
+  .trial .button {
+    justify-self: end;
+    background: var(--coral);
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blog-card {
+    overflow: hidden;
+  }
+
+  .blog-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .blog-card div {
+    display: grid;
+    gap: 10px;
+    padding: 18px;
+  }
+
+  .blog-card span {
+    color: var(--coral);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .contact-section {
+    background: var(--soft);
+  }
+
+  .contact-box {
+    display: grid;
+    gap: 12px;
+    padding: 28px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+    font-weight: 700;
+  }
+
+  .contact-box a {
+    color: var(--teal);
+    font-size: 1.2rem;
+  }
+
+  .scroll-reveal {
+    opacity: 0;
+    transition: opacity 620ms ease, transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
+  }
+
+  .slide-from-right {
+    transform: translateX(42px);
+  }
+
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 980px) {
+    .hero,
+    .message-inner,
+    .split-heading,
+    .privacy-note,
+    .trial,
+    .contact,
+    .habit-panel {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      min-height: auto;
+    }
+
+    .pain-grid,
+    .topic-grid,
+    .outcomes-list,
+    .stories-grid,
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trial .button {
+      justify-self: start;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .pain-grid,
+    .topic-grid,
+    .outcomes-list,
+    .stories-grid,
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-media,
+    .hero-media img {
+      min-height: 300px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>

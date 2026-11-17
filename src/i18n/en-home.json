@@ -1,0 +1,15 @@
+{
+  "painPoints": ["I find it hard to say no.", "I put off difficult conversations.", "I cannot make a decision.", "Work takes over my whole life.", "I feel inadequate despite being successful.", "I struggle to express my needs in relationships.", "I start new habits but cannot keep them up.", "I want to change my life but cannot find the first step."],
+  "topicGroups": ["Setting boundaries and saying no", "Procrastination and taking action", "Career direction and visibility", "Decision making and uncertainty", "Confidence and feelings of inadequacy", "Relationship coaching and difficult conversations", "Work–life balance and burnout", "Changing habits", "Money, risk and business decisions", "Finding meaning and direction in life"],
+  "sessionGains": ["Bring what is on your mind into a clear focus.", "Recognise the need behind your feelings.", "See a small step within your control.", "Move from feeling stuck towards possible solutions.", "Get support from our app to replace an old habit with a new behaviour."],
+  "userStories": [
+    "I am 42 and I really love my job. But constant tension with my manager made me dread going to work every morning. My spouse gave me Perda coaching sessions for my birthday. After 10 sessions, I managed to handle my fear and communicate openly with my manager. I now feel much more secure and enjoy my work more.",
+    "I am 48. Throughout my 21-year marriage, I ignored everything that made me unhappy because I feared being abandoned. I felt trapped and helpless. Perda coaching helped me a great deal. After 12 sessions, that fear had eased. I still live in the same home with the same person, but I feel much stronger now. I have learned to prioritise myself and set boundaries. I thought the problem was my spouse, but the solution was within me.",
+    "I am 35 and a mother of two. I was trying to live by the rules I had been taught, but I had stopped enjoying anything. A friend recommended Perda coaching. I now feel much lighter and freer. Although my life is much the same, small changes have made a big difference. That feeling means a lot to me."
+  ],
+  "faqs": [
+    {"question": "Does Perda give me advice?", "answer": "No. Perda helps you clarify your own answer through questions that make it easier to reflect, rather than giving ready-made advice."},
+    {"question": "What does AI do here?", "answer": "AI structures the conversation and generates follow-up questions based on your answers. The aim is to help you make sense of what is on your mind."},
+    {"question": "What if I am not satisfied after my first session?", "answer": "If you are not satisfied with your first session in the coaching app, you can receive a full refund within 14 days of purchase. There are no recurring payments or subscriptions."}
+  ]
+}

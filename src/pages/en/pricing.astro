@@ -1,0 +1,285 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
+
+const plans = [
+  {
+    label: "4 sessions",
+    price: "790 TL",
+    description: "For short-term goals, important decisions and regular reflection.",
+    sessions: "4 sessions",
+    validity: "Valid for 2 months",
+    features: ["AI coaching conversations", "Habit support with Keok", "Session transfers"],
+  },
+  {
+    label: "10 sessions",
+    price: "1790 TL",
+    description: "For longer-term development goals and ongoing coaching needs.",
+    sessions: "10 sessions",
+    validity: "Valid for 4 months",
+    featured: true,
+    features: ["AI coaching conversations", "Habit support with Keok", "Session transfers"],
+  },
+  {
+    label: "75 sessions",
+    price: "8990 TL",
+    description: "For teams, frequent use and long-term development programmes.",
+    sessions: "75 sessions",
+    validity: "Valid for 6 months",
+    features: ["AI coaching conversations", "Habit support with Keok", "Session transfers"],
+  },
+];
+
+const sharedFeatures = [
+  "AI coaching conversations",
+  "Clarify your focus in 7–10 questions",
+  "Delete session conversations",
+  "Session transfers",
+  "Build new habits with the free Keok app",
+];
+---
+
+<BaseLayout
+  title="Pricing | Perda Human Resources"
+  description="Explore packages of 4, 10 and 75 sessions for the Perda AI coaching app. All prices include VAT."
+>
+  <section class="pricing-hero">
+    <div class="container">
+      <p class="eyebrow">Pricing</p>
+      <h1>Choose the coaching plan that suits your needs.</h1>
+      <p class="lead">
+        Every package includes the same features. Choose 4, 10 or 75 coaching sessions to suit your needs.
+      </p>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container pricing-note">
+      <strong>All prices include VAT.</strong>
+      <span>If you are not satisfied with your first session in the coaching app, you can receive a full refund within 14 days of purchase. There are no recurring payments or subscriptions.</span>
+    </div>
+    <div class="container pricing-grid">
+      {plans.map((plan) => (
+        <article class={`price-card ${plan.featured ? "price-card-featured" : ""}`}>
+          {plan.featured && <span class="popular-label">Featured</span>}
+          <h2>{plan.label}</h2>
+          <div class="price-row">
+            <strong>{plan.price}</strong>
+          </div>
+          <p>{plan.description}</p>
+          <span class="session-count">{plan.sessions}</span>
+          <span class="validity">{plan.validity}</span>
+          <ul>
+            {plan.features.map((feature) => <li>{feature}</li>)}
+          </ul>
+          <a class="button" href={signupUrl} target="_blank" rel="noopener noreferrer">Create an account</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">For Every User</p>
+        <h2>The same powerful features for everyone.</h2>
+      </div>
+      <p>
+        Every new account has access to the same features. All packages include AI coaching conversations, session transfers and habit support with Keok.
+      </p>
+    </div>
+    <div class="container shared-feature-grid">
+      {sharedFeatures.map((feature) => (
+        <article class="shared-feature">
+          <span>✓</span>
+          <p>{feature}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="pricing-footer-section">
+    <div class="container pricing-footer">
+      <div>
+        <p class="eyebrow">Money-back Guarantee</p>
+        <h2>Get a refund if you are not satisfied after your first session.</h2>
+      </div>
+      <p>
+        If you are not satisfied after completing your coaching session, you are entitled to a full refund within 14 days. There is no subscription; buy session packages as you need them.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .pricing-hero {
+    background: var(--soft);
+  }
+
+  .pricing-section {
+    background: var(--paper);
+  }
+
+  .pricing-note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border: 1px solid #f0d7b2;
+    border-radius: 8px;
+    padding: 14px 18px;
+    background: #fff4e5;
+    color: #594018;
+  }
+
+  .pricing-note strong {
+    color: var(--coral);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .price-card {
+    position: relative;
+    display: flex;
+    min-height: 470px;
+    flex-direction: column;
+    gap: 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .price-card-featured {
+    border-color: var(--teal);
+    box-shadow: var(--shadow);
+  }
+
+  .popular-label {
+    align-self: flex-start;
+    border-radius: 999px;
+    padding: 6px 10px;
+    color: white;
+    background: var(--teal);
+    font-size: 0.78rem;
+    font-weight: 850;
+  }
+
+  .price-card h2 {
+    font-size: 1.55rem;
+  }
+
+  .price-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .price-row s {
+    color: var(--muted);
+    font-weight: 700;
+  }
+
+  .price-row strong {
+    color: var(--teal-dark);
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .session-count {
+    color: var(--coral);
+    font-weight: 850;
+  }
+
+  .validity {
+    color: var(--teal-dark);
+    font-weight: 800;
+  }
+
+  .price-card ul {
+    display: grid;
+    gap: 9px;
+    margin: 0 0 8px;
+    padding-left: 20px;
+    color: #344340;
+  }
+
+  .price-card .button {
+    margin-top: auto;
+  }
+
+  .features-section {
+    background: var(--soft);
+  }
+
+  .shared-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .shared-feature {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: start;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px;
+    background: white;
+  }
+
+  .shared-feature span {
+    color: var(--coral);
+    font-weight: 900;
+  }
+
+  .shared-feature p {
+    color: var(--teal-dark);
+    font-weight: 800;
+  }
+
+  .pricing-footer-section {
+    background: #122321;
+  }
+
+  .pricing-footer {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .pricing-footer h2,
+  .pricing-footer p {
+    color: white;
+  }
+
+  @media (max-width: 1050px) {
+    .pricing-grid,
+    .shared-feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 680px) {
+    .pricing-grid,
+    .shared-feature-grid,
+    .pricing-footer {
+      grid-template-columns: 1fr;
+    }
+
+    .price-card {
+      min-height: auto;
+    }
+  }
+</style>

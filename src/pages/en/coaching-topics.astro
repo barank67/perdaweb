@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import categories from "../../i18n/en-topics.json";
+---
+
+<BaseLayout
+  title="Example Coaching Topics | Perda"
+  description="Explore coaching topics at Perda: boundaries, decisions, careers, relationships, confidence, habits and work–life balance."
+>
+  <section class="topics-hero">
+    <div class="container">
+      <p class="eyebrow">Coaching Topics</p>
+      <h1>Example topics to explore in coaching</h1>
+      <p class="lead">
+        Only you know the answer that is right for you. We help you find it. The topics below are examples you can explore in a Perda coaching session.
+      </p>
+    </div>
+  </section>
+
+  <section class="topics-section">
+    <div class="container topics-list">
+      {categories.map((category) => (
+        <article class="topic-category">
+          <h2>{category.title}</h2>
+          <div class="topic-items">
+            {category.items.map(([title, text]) => (
+              <div class="topic-item">
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="topics-cta-section">
+    <div class="container topics-cta">
+      <div>
+        <p class="eyebrow">Coaching Session</p>
+        <h2>Start with what is on your mind.</h2>
+      </div>
+      <p>
+        You can start a session even if your topic is not listed here. What matters is bringing the issue on your mind into a clearer focus together.
+      </p>
+      <a class="button" href="https://coach.perda.com.tr/accounts/signup/" target="_blank" rel="noopener noreferrer">Create an account</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .topics-hero {
+    background: var(--soft);
+  }
+
+  .topics-section {
+    background: var(--paper);
+  }
+
+  .topics-list {
+    display: grid;
+    gap: 26px;
+  }
+
+  .topic-category {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: clamp(22px, 4vw, 34px);
+    background: white;
+    box-shadow: 0 8px 24px rgba(20, 32, 31, 0.06);
+  }
+
+  .topic-category h2 {
+    margin-bottom: 22px;
+    font-size: clamp(1.65rem, 3vw, 2.45rem);
+  }
+
+  .topic-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .topic-item {
+    border-top: 4px solid var(--coral);
+    border-radius: 8px;
+    padding: 18px;
+    background: var(--soft);
+  }
+
+  .topic-item h3 {
+    margin-bottom: 8px;
+    color: var(--teal-dark);
+  }
+
+  .topics-cta-section {
+    background: #122321;
+  }
+
+  .topics-cta {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .topics-cta h2,
+  .topics-cta p {
+    color: white;
+  }
+
+  .topics-cta .button {
+    background: var(--coral);
+  }
+
+  @media (max-width: 900px) {
+    .topic-items,
+    .topics-cta {
+      grid-template-columns: 1fr;
+    }
+
+    .topics-cta .button {
+      justify-self: start;
+    }
+  }
+</style>

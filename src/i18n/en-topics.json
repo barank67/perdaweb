@@ -1,0 +1,72 @@
+[
+  {"title":"Setting Boundaries and Expressing Yourself","items":[
+    ["I find it hard to say no.","You notice that accepting requests to avoid upsetting others leaves you exhausted, and want to protect your boundaries without guilt."],
+    ["I care too much about what others think of me.","You think more about other people's reactions than your own wishes, and want to make choices without needing approval."],
+    ["I cannot share my ideas in meetings.","Fear of being wrong keeps you in the background, and you want to express yourself more clearly."],
+    ["I struggle to ask for help.","You want to see asking for support as a natural form of collaboration rather than a weakness."],
+    ["I turn down help but feel hurt when I am left alone.","You want to learn to express your needs directly and communicate your expectations more clearly."]
+  ]},
+  {"title":"Procrastination, Perfectionism and Taking Action","items":[
+    ["I wait until I feel ready before starting.","You want to take a small step even before you have enough information, time or confidence."],
+    ["I try to do everything perfectly.","The possibility of mistakes makes you delay work or hold it back, and you want to accept what is good enough."],
+    ["I put off important work and keep busy with small tasks.","You want a routine that moves your important goals forward, beyond simply keeping you busy."],
+    ["I cannot finish the projects I start.","You want to keep going and achieve results after the initial excitement fades."],
+    ["I know I want to change my life but cannot find the first step.","You want to identify a small, meaningful first step within your control, without the pressure of a major transformation."]
+  ]},
+  {"title":"Career Direction and Visibility","items":[
+    ["I want to change jobs but do not know which direction to take.","You want to find a career direction that fits your values and abilities."],
+    ["I hesitate to ask for a promotion.","You want to explain your contribution clearly and feel more comfortable discussing your role and pay."],
+    ["I want to earn more but hesitate to put myself forward.","You want to make your contribution visible and present proposals without overstating your value."],
+    ["I cannot decide between starting a business and keeping my secure job.","You want to weigh your desire for freedom against your need for security realistically and create a transition plan."],
+    ["I get attached to an idea before knowing whether it is sound.","You want to separate your idea from your ego and decide more calmly whether to develop, change or let it go."]
+  ]},
+  {"title":"Leadership, Teams and Difficult Feedback","items":[
+    ["I immediately get defensive when criticised.","You want to listen to feedback without experiencing it as a personal attack."],
+    ["I cannot delegate.","You want to share responsibility without losing all control and make progress without burning out."],
+    ["Since becoming a manager, I struggle to set boundaries with former peers.","You want to be a manager who is both considerate and decisive."],
+    ["I take my team's conflicts personally.","You want to lead without carrying everyone's emotional burden."],
+    ["I do everything myself in my business.","You want to decide which tasks to let go of and make room for growth."]
+  ]},
+  {"title":"Work–Life Balance and Burnout","items":[
+    ["Work takes over my whole life.","You want to make real space for your personal life while continuing to care about your work."],
+    ["I feel unproductive when I am not busy.","You want a healthier understanding of the difference between staying busy and creating value."],
+    ["I see taking time for myself as selfish.","You want to learn to see your own needs as legitimate too."],
+    ["I feel I must be exhausted to deserve rest.","You want rest to become a natural part of life rather than a reward."],
+    ["My phone and social media control my time.","You want to manage your attention consciously instead of turning to a screen whenever you are bored."]
+  ]},
+  {"title":"Decision Making, Risk and Uncertainty","items":[
+    ["I keep changing my mind when making decisions.","You want to make good-enough decisions without getting caught up in what each option might cost you."],
+    ["I repeatedly question decisions I have already made.","You want to own your choices and move forward without draining your energy."],
+    ["I stay stuck because I avoid taking risks.","You want to consider calculated risks without magnifying the possibility of failure."],
+    ["I find it hard to try again after a failure.","You want to learn and continue without treating one disappointing result as proof of who you are."],
+    ["I fear that success will make my life harder.","You want to understand your fears about the visibility, responsibility and expectations that come with success."]
+  ]},
+  {"title":"Confidence, Comparison and Self-Evaluation","items":[
+    ["I downplay my achievements.","You want to assess your efforts and strengths more realistically."],
+    ["I feel inadequate despite being successful.","You want to develop a more solid trust in your abilities."],
+    ["I cannot stop comparing myself with others.","You want to measure your progress by your own standards."],
+    ["I know what I should do, but not what I want.","You want to clarify whether the choices others see as right are truly your own."],
+    ["My life looks good from the outside, but I feel something is missing.","You want to give the next chapter of your life a meaningful direction."]
+  ]},
+  {"title":"Relationship Coaching and Difficult Conversations","items":[
+    ["I keep putting off difficult conversations.","You want to speak calmly, clearly and in good time, before the problem grows."],
+    ["I feel I am always the one giving in my relationships.","You want a healthier approach to how you give and what you expect in return."],
+    ["I take my partner's behaviour personally.","You want to discuss situations openly rather than making assumptions."],
+    ["I avoid expressing my needs in my relationship.","You want to say what you need without blaming the other person."],
+    ["I focus on being right in arguments.","You want to move beyond competing to be right and communicate in a way that protects the relationship and supports a solution."]
+  ]},
+  {"title":"Social Connections, Family and Parenting","items":[
+    ["I cannot move on after a relationship ends.","You want to learn from the past and make room for something new in your life."],
+    ["I want to meet new people but never take the first step.","You want to connect without trying to control the outcome."],
+    ["I struggle to maintain friendships.","You want to put regular, sincere effort into your relationships."],
+    ["I feel caught between my family's expectations and my own life.","You want to make independent decisions while preserving your connection."],
+    ["I try to solve every problem my child has.","You want to find a balance between offering support and taking control."]
+  ]},
+  {"title":"Habits, Money and Life Transitions","items":[
+    ["I set too many goals for myself.","You want to choose a few goals that truly matter instead of changing everything at once."],
+    ["I give up completely when my plans go wrong.","You want to resume after a setback without abandoning the entire plan."],
+    ["I start new habits enthusiastically but soon give up.","You want a routine built on small steps that can withstand setbacks."],
+    ["I feel I have lost myself since becoming a parent.","You want to make room for your own identity alongside being a parent."],
+    ["I feel guilty when I spend money.","You want to make money decisions based on your priorities rather than fear and guilt."]
+  ]}
+]

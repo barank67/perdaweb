@@ -1,4 +1,6 @@
 ---
+import { languagePaths } from "../i18n/routes";
+
 interface Props {
   title: string;
   description: string;
@@ -10,8 +12,18 @@ const {
   description,
   image = "/images/hero-ai-coaching.png",
 } = Astro.props;
+const en = Astro.url.pathname.startsWith("/en/") || Astro.url.pathname === "/en";
+const lang = en ? "en" : "tr";
+const paths = languagePaths(Astro.url.pathname);
 const canonical = new URL(Astro.url.pathname, "https://perda.com.tr");
-const navItems = [
+const navItems = en ? [
+  { href: "/en/#nasil-calisir", label: "How it works" },
+  { href: "/en/coaching-topics/", label: "Topics" },
+  { href: "/en/#seans", label: "Coaching" },
+  { href: "/en/pricing/", label: "Pricing" },
+  { href: "/en/blog/", label: "Blog" },
+  { href: "/en/#iletisim", label: "Contact" },
+] : [
   { href: "/#nasil-calisir", label: "Nasıl Çalışır" },
   { href: "/kocluk-konulari", label: "Konular" },
   { href: "/#seans", label: "Koçluk Seansı" },
@@ -20,12 +32,12 @@ const navItems = [
   { href: "/#iletisim", label: "İletişim" },
 ];
 const contactUrl =
-  "https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=Ko%C3%A7luk%20seans%C4%B1%20hakk%C4%B1nda";
+  `https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=${encodeURIComponent(en ? "About coaching sessions" : "Koçluk seansı hakkında")}`;
 const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
 ---
 
 <!doctype html>
-<html lang="tr">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,6 +45,11 @@ const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="tr" href={new URL(paths.tr, "https://perda.com.tr")} />
+    <link rel="alternate" hreflang="en" href={new URL(paths.en, "https://perda.com.tr")} />
+    <link rel="alternate" hreflang="x-default" href={new URL(paths.tr, "https://perda.com.tr")} />
+    <meta property="og:locale" content={en ? "en_GB" : "tr_TR"} />
+    <meta property="og:locale:alternate" content={en ? "tr_TR" : "en_GB"} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -52,32 +69,38 @@ const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Perda İnsan Kaynakları ana sayfa">
-        <img src="/images/perda-logo.png" alt="Perda İnsan Kaynakları" width="152" height="48" />
+      <a class="brand" href={en ? "/en/" : "/"} aria-label={en ? "Perda Human Resources home" : "Perda İnsan Kaynakları ana sayfa"}>
+        <img src="/images/perda-logo.png" alt={en ? "Perda Human Resources" : "Perda İnsan Kaynakları"} width="152" height="48" />
       </a>
-      <nav aria-label="Ana menü">
+      <nav aria-label={en ? "Main navigation" : "Ana menü"}>
         {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
       </nav>
-      <a class="header-cta" href={signupUrl} target="_blank" rel="noopener noreferrer">Koçluk Seansı</a>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label={en ? "Language" : "Dil seçimi"}>
+          <a href={paths.tr} lang="tr" hreflang="tr" aria-label="Türkçe" aria-current={!en ? "page" : undefined}>TR</a>
+          <a href={paths.en} lang="en" hreflang="en" aria-label="English" aria-current={en ? "page" : undefined}>EN</a>
+        </div>
+        <a class="header-cta" href={signupUrl} target="_blank" rel="noopener noreferrer">{en ? "Coaching Session" : "Koçluk Seansı"}</a>
+      </div>
     </header>
     <main>
       <slot />
     </main>
     <footer class="site-footer">
       <div>
-        <img src="/images/perda-logo.png" alt="Perda İnsan Kaynakları" width="132" height="42" />
-        <p>Kafanıza takılan konuları netleştirmenize ve bir sonraki adımı görmenize yardımcı olan koçluk uygulaması.</p>
-        <p>Perda markası Kobiai Yapay Zeka Çözümleri Ltd Şti'ne aittir.</p>
+        <img src="/images/perda-logo.png" alt={en ? "Perda Human Resources" : "Perda İnsan Kaynakları"} width="132" height="42" />
+        <p>{en ? "A coaching app that helps you clarify what is on your mind and see your next step." : "Kafanıza takılan konuları netleştirmenize ve bir sonraki adımı görmenize yardımcı olan koçluk uygulaması."}</p>
+        <p>{en ? "The Perda brand is owned by Kobiai Yapay Zeka Çözümleri Ltd Şti." : "Perda markası Kobiai Yapay Zeka Çözümleri Ltd Şti'ne aittir."}</p>
       </div>
       <div>
-        <strong>İletişim</strong>
+        <strong>{en ? "Contact" : "İletişim"}</strong>
         <a href={contactUrl} target="_blank" rel="noopener noreferrer">coach@perda.com.tr</a>
-        <span>Akasya Kule, Acıbadem Mah. Üsküdar / İstanbul</span>
+        <span>{en ? "Akasya Tower, Acıbadem, Üsküdar / Istanbul" : "Akasya Kule, Acıbadem Mah. Üsküdar / İstanbul"}</span>
       </div>
       <div>
-        <strong>Yasal</strong>
-        <a href="/kvkk">KVKK</a>
-        <a href="/gizlilik-politikasi">Gizlilik Politikası</a>
+        <strong>{en ? "Legal" : "Yasal"}</strong>
+        <a href={en ? "/en/data-protection/" : "/kvkk/"}>{en ? "Personal Data Protection (KVKK)" : "KVKK"}</a>
+        <a href={en ? "/en/privacy-policy/" : "/gizlilik-politikasi/"}>{en ? "Privacy Policy" : "Gizlilik Politikası"}</a>
       </div>
     </footer>
   </body>
@@ -165,6 +188,12 @@ const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
     background: rgba(251, 252, 249, 0.92);
     backdrop-filter: blur(16px);
   }
+
+  .header-actions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+  .language-switch { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 6px; }
+  .language-switch a { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; font-size: 0.82rem; font-weight: 750; border-radius: 4px; }
+  .language-switch a[aria-current="page"] { color: white; background: var(--teal); }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
 
   .brand {
     flex: 0 0 auto;
@@ -280,7 +309,7 @@ const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
     font-size: 0.92rem;
   }
 
-  @media (max-width: 920px) {
+  @media (max-width: 1180px) {
     .site-header {
       align-items: flex-start;
       flex-wrap: wrap;
@@ -301,6 +330,8 @@ const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
   }
 
   @media (max-width: 560px) {
+    .header-actions { gap: 6px; }
+    .language-switch a { min-width: 30px; }
     .site-header {
       gap: 12px;
     }

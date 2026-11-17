@@ -5,7 +5,7 @@ import home from "../../i18n/en-home.json";
 const { painPoints, topicGroups, sessionGains, userStories, faqs } = home;
 const posts = (await getCollection("blogEn")).filter(p => !p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
 const getPostSlug = (id: string) => id.replace(/\.md$/, "");
-const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
+const signupUrl = "https://coach.perda.com.tr/en/accounts/signup/";
 const contactUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=${encodeURIComponent("About coaching sessions")}&body=${encodeURIComponent("Hello Perda Human Resources,\n\nI would like information about coaching sessions.\n\nFull name:\nPhone:\nWhat is on my mind:\n")}`;
 ---
 

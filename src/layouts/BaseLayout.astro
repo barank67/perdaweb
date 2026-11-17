@@ -33,7 +33,9 @@ const navItems = en ? [
 ];
 const contactUrl =
   `https://mail.google.com/mail/?view=cm&fs=1&to=coach@perda.com.tr&su=${encodeURIComponent(en ? "About coaching sessions" : "Koçluk seansı hakkında")}`;
-const signupUrl = "https://coach.perda.com.tr/accounts/signup/";
+const signupUrl = en
+  ? "https://coach.perda.com.tr/en/accounts/signup/"
+  : "https://coach.perda.com.tr/accounts/signup/";
 ---
 
 <!doctype html>

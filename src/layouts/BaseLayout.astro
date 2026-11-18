@@ -79,8 +79,8 @@ const signupUrl = en
       </nav>
       <div class="header-actions">
         <div class="language-switch" role="group" aria-label={en ? "Language" : "Dil seçimi"}>
-          <a href={paths.tr} lang="tr" hreflang="tr" aria-label="Türkçe" aria-current={!en ? "page" : undefined}>TR</a>
-          <a href={paths.en} lang="en" hreflang="en" aria-label="English" aria-current={en ? "page" : undefined}>EN</a>
+          <a href={paths.tr} lang="tr" hreflang="tr" aria-label="Türkçe" aria-current={!en ? "page" : undefined}><img src="/images/flag-tr.svg" alt="" width="21" height="14" aria-hidden="true" />TR</a>
+          <a href={paths.en} lang="en" hreflang="en" aria-label="English" aria-current={en ? "page" : undefined}><img src="/images/flag-en.svg" alt="" width="21" height="14" aria-hidden="true" />EN</a>
         </div>
         <a class="header-cta" href={signupUrl} target="_blank" rel="noopener noreferrer">{en ? "Coaching Session" : "Koçluk Seansı"}</a>
       </div>
@@ -193,7 +193,8 @@ const signupUrl = en
 
   .header-actions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
   .language-switch { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 6px; }
-  .language-switch a { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; font-size: 0.82rem; font-weight: 750; border-radius: 4px; }
+  .language-switch a { display: inline-flex; align-items: center; justify-content: center; gap: 5px; padding: 0 7px; min-width: 36px; min-height: 36px; font-size: 0.82rem; font-weight: 750; border-radius: 4px; }
+  .language-switch img { width: 21px; height: 14px; object-fit: cover; border-radius: 2px; flex-shrink: 0; }
   .language-switch a[aria-current="page"] { color: white; background: var(--teal); }
   a:focus-visible, summary:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
 
